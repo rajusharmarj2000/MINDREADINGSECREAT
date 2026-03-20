@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Slot Book करें – Mind Reading Secret</title>
+  <meta name="description" content="Payment successful! अब अपना Mind Reading Training slot book करें।"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple-deep: #1a0040;
+      --purple-mid:  #3d0080;
+      --purple-light:#7b00ff;
+      --gold:        #ffd700;
+      --orange:      #ff8c00;
+      --green:       #00e676;
+      --pink:        #ff4dac;
+    }
+
+    html, body {
+      font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+      background: #0d0020;
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ============================
+       STARFIELD BG
+    ============================ */
+    .stars-bg {
+      position: fixed; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%,  rgba(100,0,200,.55) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 20% 80%, rgba(70,0,160,.4)  0%, transparent 50%),
+        #0d0020;
+    }
+    .stars-bg::after {
+      content:''; position:absolute; inset:0;
+      background-image:
+        radial-gradient(1px 1px at 10% 15%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,.7) 0%, transparent 100%),
+        radial-gradient(1px 1px at 55%  8%, #fff 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 55%, #fff 0%, transparent 100%),
+        radial-gradient(2px 2px at 15% 90%, rgba(255,215,0,.8) 0%, transparent 100%),
+        radial-gradient(2px 2px at 60% 85%, rgba(255,100,200,.6) 0%, transparent 100%);
+      animation: twinkle 4s ease-in-out infinite alternate;
+    }
+    @keyframes twinkle { from{opacity:.7;} to{opacity:1;} }
+
+    .page {
+      position: relative; z-index: 1;
+      max-width: 430px;
+      margin: 0 auto;
+      min-height: 100vh;
+      padding-bottom: 40px;
+    }
+
+    /* ============================
+       SUCCESS BANNER
+    ============================ */
+    .success-banner {
+      background: linear-gradient(135deg, #003300, #006600, #00aa44);
+      padding: 18px 16px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .success-banner::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent);
+      animation: shimmer 2.5s infinite;
+    }
+    @keyframes shimmer { 100%{ transform: translateX(200%); } }
+    .success-banner::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, transparent 0%, transparent 100%);
+    }
+    .s-check {
+      font-size: 44px;
+      display: block;
+      animation: check-pop .6s cubic-bezier(.36,.07,.19,.97);
+    }
+    @keyframes check-pop {
+      0%  { transform: scale(0) rotate(-30deg); opacity: 0; }
+      70% { transform: scale(1.2) rotate(5deg); }
+      100%{ transform: scale(1) rotate(0deg); opacity: 1; }
+    }
+    .s-title {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 20px; font-weight: 900;
+      color: #fff; margin: 6px 0 2px;
+    }
+    .s-sub {
+      font-size: 13px; color: rgba(255,255,255,.85);
+      font-family: 'Noto Sans Devanagari', sans-serif;
+    }
+    .s-amount {
+      display: inline-block;
+      background: rgba(255,255,255,.2);
+      border: 1.5px solid rgba(255,255,255,.4);
+      border-radius: 30px;
+      padding: 4px 16px;
+      font-size: 13px; font-weight: 700;
+      margin-top: 8px;
+      color: #fff;
+    }
+
+    /* ============================
+       STEP INDICATOR
+    ============================ */
+    .steps {
+      display: flex; align-items: center; justify-content: center;
+      gap: 6px; padding: 16px 16px 0;
+    }
+    .step {
+      display: flex; flex-direction: column; align-items: center; gap: 3px;
+      font-size: 10px; color: #888; font-weight: 600;
+    }
+    .step-dot {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 2px solid #333;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700;
+      background: rgba(255,255,255,.05);
+      color: #666;
+    }
+    .step.done .step-dot {
+      background: var(--green); border-color: var(--green); color: #000;
+    }
+    .step.active .step-dot {
+      background: linear-gradient(135deg, var(--purple-light), var(--pink));
+      border-color: transparent; color: #fff;
+      box-shadow: 0 0 14px rgba(123,0,255,.6);
+    }
+    .step.done { color: var(--green); }
+    .step.active { color: #fff; }
+    .step-line {
+      flex: 1; height: 2px;
+      background: linear-gradient(90deg, var(--green), #444);
+      border-radius: 2px; margin-bottom: 14px;
+    }
+
+    /* ============================
+       SECTION CARD
+    ============================ */
+    .card {
+      background: linear-gradient(160deg, rgba(30,0,70,.85), rgba(10,0,35,.9));
+      border: 1.5px solid rgba(255,215,0,.2);
+      border-radius: 18px;
+      margin: 14px 16px 0;
+      padding: 18px;
+      backdrop-filter: blur(10px);
+    }
+    .card-title {
+      font-size: 15px; font-weight: 800;
+      color: var(--gold);
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 14px;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+    }
+
+    /* ============================
+       CALENDAR
+    ============================ */
+    .cal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .cal-month {
+      font-size: 15px; font-weight: 800; color: #fff;
+    }
+    .cal-nav {
+      background: rgba(123,0,255,.25);
+      border: 1.5px solid rgba(123,0,255,.4);
+      border-radius: 8px; padding: 4px 10px;
+      color: #fff; font-size: 14px; font-weight: 700;
+      cursor: pointer; transition: all .2s;
+    }
+    .cal-nav:hover {
+      background: rgba(123,0,255,.5);
+      box-shadow: 0 0 10px rgba(123,0,255,.4);
+    }
+    .cal-grid {
+      display: grid; grid-template-columns: repeat(7, 1fr);
+      gap: 4px; text-align: center;
+    }
+    .cal-day-label {
+      font-size: 10px; color: #a080cc; font-weight: 700;
+      padding: 4px 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    .cal-day {
+      aspect-ratio: 1;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 600;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: all .2s;
+      position: relative;
+    }
+    .cal-day:hover:not(.disabled):not(.blank) {
+      background: rgba(123,0,255,.3);
+      border-color: rgba(123,0,255,.5);
+      transform: scale(1.1);
+    }
+    .cal-day.today {
+      border-color: rgba(255,215,0,.5);
+      color: var(--gold);
+    }
+    .cal-day.selected {
+      background: linear-gradient(135deg, #7b00ff, #ff4dac);
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(123,0,255,.5);
+      transform: scale(1.12);
+      font-weight: 900;
+    }
+    .cal-day.past, .cal-day.disabled {
+      color: #333; cursor: not-allowed;
+      background: transparent; border-color: transparent;
+    }
+    .cal-day.blank { cursor: default; }
+    .cal-day.booked {
+      background: rgba(255,50,50,.15);
+      border-color: rgba(255,50,50,.3);
+      color: #ff6b6b;
+      cursor: not-allowed;
+    }
+    .cal-day.booked::after {
+      content: '';
+      position: absolute; bottom: 3px; left: 50%;
+      transform: translateX(-50%);
+      width: 4px; height: 4px; border-radius: 50%;
+      background: #ff6b6b;
+    }
+    .cal-day.available::after {
+      content: '';
+      position: absolute; bottom: 3px; left: 50%;
+      transform: translateX(-50%);
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--green);
+    }
+
+    /* Calendar legend */
+    .cal-legend {
+      display: flex; gap: 14px; flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .legend-item {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 10px; color: #999; font-weight: 600;
+    }
+    .legend-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+    }
+
+    /* ============================
+       TIME SLOTS
+    ============================ */
+    .slots-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .slot {
+      background: rgba(255,255,255,.05);
+      border: 1.5px solid rgba(255,255,255,.12);
+      border-radius: 12px; padding: 12px 10px;
+      text-align: center; cursor: pointer;
+      transition: all .25s;
+      position: relative; overflow: hidden;
+    }
+    .slot:hover:not(.slot-full):not(.slot-selected) {
+      background: rgba(123,0,255,.2);
+      border-color: rgba(123,0,255,.5);
+      transform: translateY(-2px);
+    }
+    .slot.slot-selected {
+      background: linear-gradient(135deg, rgba(123,0,255,.4), rgba(255,77,172,.3));
+      border-color: var(--purple-light);
+      box-shadow: 0 4px 16px rgba(123,0,255,.35);
+    }
+    .slot.slot-full {
+      background: rgba(255,50,50,.08);
+      border-color: rgba(255,50,50,.2);
+      cursor: not-allowed; opacity: .6;
+    }
+    .slot-time {
+      font-size: 15px; font-weight: 800;
+      color: #fff; display: block;
+    }
+    .slot-period {
+      font-size: 10px; font-weight: 600;
+      color: #a080cc; display: block; margin-top: 2px;
+    }
+    .slot-avail {
+      font-size: 10px; font-weight: 700;
+      margin-top: 5px; display: block;
+    }
+    .slot-available { color: var(--green); }
+    .slot-limited { color: var(--orange); }
+    .slot-full-text { color: #ff6b6b; }
+    .slot-check {
+      position: absolute; top: 5px; right: 7px;
+      font-size: 12px;
+      opacity: 0; transition: opacity .2s;
+    }
+    .slot.slot-selected .slot-check { opacity: 1; }
+
+    /* ============================
+       USER DETAILS FORM
+    ============================ */
+    .form-group { margin-bottom: 12px; }
+    .form-label {
+      display: block; font-size: 12px; font-weight: 700;
+      color: #c0a8ff; margin-bottom: 6px;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+    }
+    .form-input {
+      width: 100%;
+      background: rgba(255,255,255,.07);
+      border: 1.5px solid rgba(255,255,255,.15);
+      border-radius: 10px;
+      padding: 11px 14px;
+      color: #fff; font-size: 14px;
+      font-family: 'Poppins', sans-serif;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .form-input::placeholder { color: #666; }
+    .form-input:focus {
+      border-color: var(--purple-light);
+      box-shadow: 0 0 12px rgba(123,0,255,.3);
+    }
+
+    /* ============================
+       SUMMARY BOX
+    ============================ */
+    .summary-box {
+      background: rgba(255,215,0,.06);
+      border: 1.5px solid rgba(255,215,0,.25);
+      border-radius: 12px;
+      padding: 14px;
+      margin-top: 14px;
+    }
+    .summary-title {
+      font-size: 12px; font-weight: 700; color: var(--gold);
+      margin-bottom: 10px;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+    }
+    .summary-row {
+      display: flex; justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      font-size: 12px;
+    }
+    .summary-row:last-child { border-bottom: none; }
+    .summary-key { color: #aaa; }
+    .summary-val { color: #fff; font-weight: 700; }
+    .summary-val.gold { color: var(--gold); }
+
+    /* ============================
+       CONFIRM BUTTON
+    ============================ */
+    .confirm-wrap { padding: 14px 16px 0; }
+    .confirm-btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%;
+      background: linear-gradient(135deg, #006600, #00aa44, #00cc55);
+      border: none; border-radius: 16px;
+      padding: 18px 16px;
+      color: #fff;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 17px; font-weight: 900;
+      cursor: pointer; position: relative; overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,200,80,.45);
+      animation: cta-glow 2.5s infinite;
+      transition: transform .2s;
+      border: none;
+    }
+    .confirm-btn::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent);
+      transform: translateX(-100%);
+      animation: shimmer-btn 2s infinite;
+    }
+    @keyframes shimmer-btn { 100%{ transform: translateX(200%); } }
+    @keyframes cta-glow {
+      0%,100%{ box-shadow: 0 8px 30px rgba(0,200,80,.45); }
+      50%    { box-shadow: 0 8px 40px rgba(0,200,80,.75), 0 0 0 6px rgba(0,200,80,.12); }
+    }
+    .confirm-btn:hover { transform: translateY(-2px) scale(1.02); }
+    .confirm-btn:active { transform: scale(.98); }
+    .confirm-btn:disabled {
+      background: #333; cursor: not-allowed;
+      box-shadow: none; animation: none;
+    }
+    .confirm-btn:disabled::after { display: none; }
+
+    /* ============================
+       SUCCESS MODAL
+    ============================ */
+    .modal-overlay {
+      display: none;
+      position: fixed; inset: 0; z-index: 999;
+      background: rgba(0,0,0,.85);
+      backdrop-filter: blur(8px);
+      align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.show { display: flex; }
+    .modal-box {
+      background: linear-gradient(160deg, #1a0040, #0a0020);
+      border: 2px solid rgba(0,200,80,.4);
+      border-radius: 24px;
+      padding: 30px 24px;
+      text-align: center;
+      max-width: 360px; width: 100%;
+      position: relative;
+      animation: modal-in .4s cubic-bezier(.36,.07,.19,.97);
+    }
+    @keyframes modal-in {
+      from { transform: scale(.8) translateY(30px); opacity: 0; }
+      to   { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    .modal-icon { font-size: 60px; display: block; margin-bottom: 12px; animation: bounce-in .6s .2s both; }
+    @keyframes bounce-in {
+      0%  { transform: scale(0); }
+      60% { transform: scale(1.2); }
+      100%{ transform: scale(1); }
+    }
+    .modal-title {
+      font-size: 22px; font-weight: 900; color: var(--green);
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      margin-bottom: 6px;
+    }
+    .modal-sub {
+      font-size: 13px; color: #bbb;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      line-height: 1.6; margin-bottom: 18px;
+    }
+    .modal-detail {
+      background: rgba(0,200,80,.1);
+      border: 1px solid rgba(0,200,80,.25);
+      border-radius: 12px; padding: 14px;
+      margin-bottom: 18px; text-align: left;
+    }
+    .modal-detail-row {
+      display: flex; justify-content: space-between;
+      font-size: 12px; padding: 4px 0;
+    }
+    .modal-detail-key { color: #888; }
+    .modal-detail-val { color: #fff; font-weight: 700; }
+    .modal-close {
+      background: linear-gradient(135deg, #006600, #00aa44);
+      border: none; border-radius: 12px;
+      padding: 13px 30px;
+      color: #fff; font-size: 15px; font-weight: 800;
+      cursor: pointer; width: 100%;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+    }
+    .confetti {
+      position: absolute; top: -10px; left: 0; right: 0;
+      display: flex; justify-content: space-around;
+      font-size: 20px;
+      pointer-events: none;
+    }
+    .confetti span { animation: confetti-fall 2s ease-in infinite; }
+    .confetti span:nth-child(2) { animation-delay: .3s; }
+    .confetti span:nth-child(3) { animation-delay: .6s; }
+    .confetti span:nth-child(4) { animation-delay: .9s; }
+    .confetti span:nth-child(5) { animation-delay: 1.2s; }
+    @keyframes confetti-fall {
+      0%  { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+      100%{ transform: translateY(80px) rotate(360deg); opacity: 0; }
+    }
+
+    /* ============================
+       NOTICE / ALERT
+    ============================ */
+    .notice {
+      margin: 10px 16px 0;
+      background: rgba(255,140,0,.1);
+      border: 1.5px solid rgba(255,140,0,.3);
+      border-radius: 12px;
+      padding: 10px 14px;
+      display: flex; gap: 8px; align-items: flex-start;
+      font-size: 12px; color: #ffcc88; font-weight: 600;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      line-height: 1.5;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: #0d0020; }
+    ::-webkit-scrollbar-thumb { background: #7b00ff; border-radius: 4px; }
+
+    /* Disabled state for inactive sections */
+    .section-disabled {
+      opacity: .4;
+      pointer-events: none;
+      filter: grayscale(.5);
+    }
+  </style>
+</head>
+<body>
+
+<div class="stars-bg"></div>
+
+<div class="page">
+
+  <!-- SUCCESS BANNER -->
+  <div class="success-banner">
+    <span class="s-check">✅</span>
+    <div class="s-title">Payment Successful! 🎉</div>
+    <div class="s-sub">₹499 का भुगतान हो गया। अब अपना Training Slot book करें!</div>
+    <span class="s-amount">💳 Order Confirmed · Mind Reading Secret</span>
+  </div>
+
+  <!-- STEP INDICATOR -->
+  <div class="steps">
+    <div class="step done">
+      <div class="step-dot">✓</div>
+      <span>Payment</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step active">
+      <div class="step-dot">2</div>
+      <span>Date चुनें</span>
+    </div>
+    <div class="step-line" style="background: linear-gradient(90deg,#444,#444);"></div>
+    <div class="step">
+      <div class="step-dot">3</div>
+      <span>Confirmed</span>
+    </div>
+  </div>
+
+  <!-- NOTICE -->
+  <div class="notice">
+    ⚠️ &nbsp;Training slot सीमित हैं। नीचे date और time slot चुनकर अभी book करें — देरी करने पर slot full हो सकता है!
+  </div>
+
+  <!-- CALENDAR SECTION -->
+  <div class="card">
+    <div class="card-title">📅 Training Date चुनें</div>
+
+    <!-- Calendar Header -->
+    <div class="cal-header">
+      <button class="cal-nav" id="prevMonth" onclick="changeMonth(-1)">&#8592;</button>
+      <div class="cal-month" id="calMonthLabel">March 2026</div>
+      <button class="cal-nav" id="nextMonth" onclick="changeMonth(1)">&#8594;</button>
+    </div>
+
+    <!-- Day Labels -->
+    <div class="cal-grid" id="calGrid">
+      <div class="cal-day-label">Su</div>
+      <div class="cal-day-label">Mo</div>
+      <div class="cal-day-label">Tu</div>
+      <div class="cal-day-label">We</div>
+      <div class="cal-day-label">Th</div>
+      <div class="cal-day-label">Fr</div>
+      <div class="cal-day-label">Sa</div>
+    </div>
+
+    <!-- Legend -->
+    <div class="cal-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div>Available</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#ff6b6b"></div>Full</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--purple-light)"></div>Selected</div>
+    </div>
+  </div>
+
+  <!-- TIME SLOT SECTION -->
+  <div class="card" id="timeSection" style="opacity:.4; pointer-events:none; filter:grayscale(.5)">
+    <div class="card-title">⏰ Time Slot चुनें</div>
+    <div class="slots-grid" id="slotsGrid">
+      <!-- Slots will be generated by JS -->
+    </div>
+  </div>
+
+  <!-- USER DETAILS FORM -->
+  <div class="card" id="formSection" style="opacity:.4; pointer-events:none; filter:grayscale(.5)">
+    <div class="card-title">👤 आपकी Details</div>
+
+    <div class="form-group">
+      <label class="form-label" for="uName">📛 पूरा नाम</label>
+      <input type="text" id="uName" class="form-input" placeholder="जैसे: Rahul Sharma"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="uPhone">📱 Mobile Number</label>
+      <input type="tel" id="uPhone" class="form-input" placeholder="10 अंकों का नंबर"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="uEmail">📧 Email (Optional)</label>
+      <input type="email" id="uEmail" class="form-input" placeholder="yourname@email.com"/>
+    </div>
+
+    <!-- Summary -->
+    <div class="summary-box">
+      <div class="summary-title">📋 Booking Summary</div>
+      <div class="summary-row">
+        <span class="summary-key">Course</span>
+        <span class="summary-val">Mind Reading Secret</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-key">Date</span>
+        <span class="summary-val gold" id="sumDate">— चुनें</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-key">Time</span>
+        <span class="summary-val gold" id="sumTime">— चुनें</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-key">Amount Paid</span>
+        <span class="summary-val" style="color:var(--green)">₹499 ✅</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-key">Mode</span>
+        <span class="summary-val">Online Training</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIRM BUTTON -->
+  <div class="confirm-wrap">
+    <button class="confirm-btn" id="confirmBtn" disabled onclick="confirmBooking()">
+      🎯 Slot Confirm करें
+    </button>
+  </div>
+
+</div><!-- /page -->
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal-box">
+    <div class="confetti">
+      <span>🎉</span><span>⭐</span><span>🧠</span><span>🎊</span><span>✨</span>
+    </div>
+    <span class="modal-icon">🎉</span>
+    <div class="modal-title">Slot Booked! बधाई हो!</div>
+    <div class="modal-sub">आपका Mind Reading Training slot confirm हो गया है। Details WhatsApp/Email पर भेज दी जाएंगी।</div>
+    <div class="modal-detail">
+      <div class="modal-detail-row">
+        <span class="modal-detail-key">नाम</span>
+        <span class="modal-detail-val" id="modalName">—</span>
+      </div>
+      <div class="modal-detail-row">
+        <span class="modal-detail-key">Date</span>
+        <span class="modal-detail-val" id="modalDate">—</span>
+      </div>
+      <div class="modal-detail-row">
+        <span class="modal-detail-key">Time</span>
+        <span class="modal-detail-val" id="modalTime">—</span>
+      </div>
+      <div class="modal-detail-row">
+        <span class="modal-detail-key">Course</span>
+        <span class="modal-detail-val">Mind Reading Secret 🧠</span>
+      </div>
+    </div>
+    <button class="modal-close" onclick="closeModal()">✅ ठीक है, शुक्रिया!</button>
+  </div>
+</div>
+
+<script>
+  // ==============================
+  // STATE
+  // ==============================
+  let currentYear, currentMonth, selectedDate = null, selectedSlot = null;
+
+  const today = new Date();
+  currentYear  = today.getFullYear();
+  currentMonth = today.getMonth();
+
+  // Fully booked dates (day numbers for current month; can be adjusted)
+  // Sunday = 0 (off days — no training on Sundays)
+  window.getBookedDates = function() {
+    try {
+      let saved = localStorage.getItem('mr_booked_dates');
+      let parsed = saved ? JSON.parse(saved) : null;
+      return Array.isArray(parsed) ? parsed : [17, 22, 28]; // Default dates
+    } catch(e) { return [17, 22, 28]; }
+  };
+
+  const MONTHS = [
+    'January','February','March','April','May','June',
+    'July','August','September','October','November','December'
+  ];
+
+  // Time slots with default availability
+  const ALL_SLOTS = [
+    { time: '9:00 AM',  period: 'Morning',   status: 'full'    },
+    { time: '11:00 AM', period: 'Morning',   status: 'limited' },
+    { time: '2:00 PM',  period: 'Afternoon', status: 'open'    },
+    { time: '4:00 PM',  period: 'Afternoon', status: 'limited' },
+    { time: '6:00 PM',  period: 'Evening',   status: 'open'    },
+    { time: '8:00 PM',  period: 'Evening',   status: 'open'    },
+  ];
+
+  window.getSlotConfig = function() {
+    try {
+      let saved = localStorage.getItem('mr_slot_times');
+      let parsed = saved ? JSON.parse(saved) : null;
+      return Array.isArray(parsed) ? parsed : JSON.parse(JSON.stringify(ALL_SLOTS));
+    } catch(e) { return JSON.parse(JSON.stringify(ALL_SLOTS)); }
+  };
+
+  // ==============================
+  // RENDER CALENDAR
+  // ==============================
+  function renderCalendar() {
+    try {
+      const label = document.getElementById('calMonthLabel');
+      label.textContent = MONTHS[currentMonth] + ' ' + currentYear;
+
+      const grid = document.getElementById('calGrid');
+      // Remove old day cells (keep 7 label cells)
+      while (grid.children.length > 7) grid.removeChild(grid.lastChild);
+
+      const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+      const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+      // Blank cells
+      for (let i = 0; i < firstDay; i++) {
+        const blank = document.createElement('div');
+        blank.className = 'cal-day blank';
+        grid.appendChild(blank);
+      }
+
+      // Day cells
+      const bookedDates = typeof window.getBookedDates === 'function' ? window.getBookedDates() : [17,22,28];
+      for (let d = 1; d <= daysInMonth; d++) {
+        const cell = document.createElement('div');
+        const cellDate = new Date(currentYear, currentMonth, d);
+        const isToday  = (d === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear());
+        const isPast   = cellDate < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        const isSunday = cellDate.getDay() === 0;
+        const isBooked = Array.isArray(bookedDates) ? bookedDates.includes(d) : false;
+        const isSelected = selectedDate &&
+          selectedDate.d === d &&
+          selectedDate.m === currentMonth &&
+          selectedDate.y === currentYear;
+
+        cell.textContent = d;
+        cell.className = 'cal-day';
+
+        if (isPast || isSunday) {
+          cell.classList.add('past', 'disabled');
+        } else if (isBooked) {
+          cell.classList.add('booked');
+          cell.title = 'यह दिन भरा हुआ है';
+        } else {
+          cell.classList.add('available');
+          cell.addEventListener('click', () => selectDate(d, currentMonth, currentYear, cell));
+        }
+
+        if (isToday) cell.classList.add('today');
+        if (isSelected) cell.classList.add('selected');
+        grid.appendChild(cell);
+      }
+    } catch(e) {
+      document.getElementById('calGrid').innerHTML += '<div style="color:red;font-size:10px;grid-column:1/-1;">Error cal: ' + e.message + '</div>';
+    }
+  }
+
+  function changeMonth(dir) {
+    currentMonth += dir;
+    if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+    if (currentMonth < 0)  { currentMonth = 11; currentYear--; }
+
+    // Don't go before current month
+    if (currentYear < today.getFullYear() ||
+       (currentYear === today.getFullYear() && currentMonth < today.getMonth())) {
+      currentMonth = today.getMonth();
+      currentYear  = today.getFullYear();
+    }
+    renderCalendar();
+  }
+
+  // ==============================
+  // SELECT DATE
+  // ==============================
+  function selectDate(d, m, y, cell) {
+    selectedDate = { d, m, y };
+    selectedSlot = null;
+
+    // Update calendar UI
+    document.querySelectorAll('.cal-day.selected').forEach(el => el.classList.remove('selected'));
+    cell.classList.add('selected');
+
+    // Update summary
+    const dateStr = d + ' ' + MONTHS[m] + ' ' + y;
+    document.getElementById('sumDate').textContent = dateStr;
+    document.getElementById('sumTime').textContent = '— चुनें';
+
+    // Enable time section
+    const timeSection = document.getElementById('timeSection');
+    timeSection.style.opacity = '1';
+    timeSection.style.pointerEvents = 'auto';
+    timeSection.style.filter = 'none';
+
+    // Render time slots
+    renderSlots(d);
+
+    // Smooth scroll to slots
+    setTimeout(() => timeSection.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+
+    checkFormReady();
+  }
+
+  // ==============================
+  // RENDER TIME SLOTS
+  // ==============================
+  function renderSlots(dayNum) {
+    try {
+      const grid = document.getElementById('slotsGrid');
+      grid.innerHTML = '';
+
+      // Vary slots based on day so it feels dynamic (ONLY DO THIS if admin hasn't intervened heavily, else use admin)
+      // Here we respect exactly what Admin set
+      const slotData = typeof window.getSlotConfig === 'function' ? window.getSlotConfig() : [];
+      if(!Array.isArray(slotData)) return;
+
+      slotData.forEach((slot, idx) => {
+        // If admin has set a hidden status, don't show the card at all.
+        if (slot.status === 'hidden') return;
+
+        let avail = slot.status;
+        // Provide a slight dynamic variation automatically *only* if slot is open, to increase realism, unless admin forced it
+        const bookedDates = typeof window.getBookedDates === 'function' ? window.getBookedDates() : [17,22,28];
+        const isBkd = Array.isArray(bookedDates) ? bookedDates.includes(dayNum - 1) : false;
+        if (avail === 'open' && isBkd && idx < 2) {
+           avail = 'full';
+        }
+
+        const el = document.createElement('div');
+        el.className = 'slot';
+
+        const availLabel = avail === 'full'
+          ? '<span class="slot-avail slot-full-text">❌ Full</span>'
+          : avail === 'limited'
+          ? '<span class="slot-avail slot-limited">⚡ Limited Seats</span>'
+          : '<span class="slot-avail slot-available">✅ Available</span>';
+
+        // Re-map back period if missing
+        const periodMap = ['Morning','Morning','Afternoon','Afternoon','Evening','Evening'];
+
+        el.innerHTML = `
+          <span class="slot-check">✅</span>
+          <span class="slot-time">${slot.time}</span>
+          <span class="slot-period">${slot.period || periodMap[idx]}</span>
+          ${availLabel}
+        `;
+
+        if (avail === 'full') {
+          el.classList.add('slot-full');
+        } else {
+          el.addEventListener('click', () => selectSlot(idx, {time: slot.time, period: (slot.period || periodMap[idx])}, el));
+        }
+    });
+    } catch(e) {
+      document.getElementById('slotsGrid').innerHTML = '<div style="color:red;font-size:10px;">Error slots: ' + e.message + '</div>';
+    }
+  }
+
+  // ==============================
+  // SELECT TIME SLOT
+  // ==============================
+  function selectSlot(idx, slotDataObj, cell) {
+    selectedSlot = { idx, ...slotDataObj };
+    document.querySelectorAll('.slot').forEach(s => s.classList.remove('slot-selected'));
+    cell.classList.add('slot-selected');
+
+    document.getElementById('sumTime').textContent = slotDataObj.time + ' (' + slotDataObj.period + ')';
+
+    // Enable form
+    const formSection = document.getElementById('formSection');
+    formSection.style.opacity = '1';
+    formSection.style.pointerEvents = 'auto';
+    formSection.style.filter = 'none';
+
+    setTimeout(() => formSection.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    checkFormReady();
+  }
+
+  // ==============================
+  // FORM VALIDATION → ENABLE BTN
+  // ==============================
+  function checkFormReady() {
+    const name  = document.getElementById('uName').value.trim();
+    const phone = document.getElementById('uPhone').value.trim();
+    const btn   = document.getElementById('confirmBtn');
+    
+    // Check if valid mobile (10 digits)
+    const phoneRegex = /^[0-9]{10}$/;
+    
+    if (selectedDate && selectedSlot && name.length >= 3 && phoneRegex.test(phone)) {
+      btn.removeAttribute('disabled');
+      btn.classList.add('ready');
+    } else {
+      btn.setAttribute('disabled', 'true');
+      btn.classList.remove('ready');
+    }
+  }
+
+  document.getElementById('uName').addEventListener('input', checkFormReady);
+  document.getElementById('uPhone').addEventListener('input', checkFormReady);
+
+  // ==============================
+  // CONFIRM BOOKING
+  // ==============================
+  function confirmBooking() {
+    const name  = document.getElementById('uName').value.trim();
+    const phone = document.getElementById('uPhone').value.trim();
+
+    if (!selectedDate || !selectedSlot || name.length < 2 || phone.length !== 10) return;
+
+    const dateStr = selectedDate.d + ' ' + MONTHS[selectedDate.m] + ' ' + selectedDate.y;
+
+    document.getElementById('modalName').textContent = name;
+    document.getElementById('modalDate').textContent = dateStr;
+    document.getElementById('modalTime').textContent = selectedSlot.time + ' (' + selectedSlot.period + ')';
+
+    // Update step indicator
+    document.querySelectorAll('.step')[2].classList.add('active');
+
+    // Show modal
+    document.getElementById('successModal').classList.add('show');
+  }
+
+  function closeModal() {
+    document.getElementById('successModal').classList.remove('show');
+  }
+
+  // ==============================
+  // INIT
+  // ==============================
+  renderCalendar();
+</script>
+
+<!-- ========================================
+     SECRET ADMIN PANEL (hidden inside page)
+     Trigger: Click "Mind Reading Secret" text in Summary Box 5x quickly
+========================================= -->
+<div id="adminOverlay" style="
+  display:none;position:fixed;inset:0;z-index:99999;
+  background:rgba(0,0,8,.97);overflow-y:auto;
+  font-family:'Poppins',sans-serif;
+">
+  <!-- Close btn -->
+  <button onclick="adminClose()" style="
+    position:fixed;top:14px;right:14px;
+    background:rgba(255,50,50,.15);border:1.5px solid rgba(255,80,80,.3);
+    color:#ff8888;font-size:18px;width:38px;height:38px;border-radius:50%;
+    cursor:pointer;z-index:100000;
+  ">✕</button>
+
+  <!-- LOGIN -->
+  <div id="adLoginWrap" style="
+    display:flex;align-items:center;justify-content:center;min-height:100vh;padding:20px;
+  ">
+    <div style="
+      background:linear-gradient(160deg,rgba(80,0,160,.4),rgba(30,0,60,.5));
+      border:1.5px solid rgba(255,215,0,.25);border-radius:20px;
+      padding:32px 24px;width:100%;max-width:330px;
+    ">
+      <div style="text-align:center;font-size:36px;margin-bottom:6px;">🔐</div>
+      <div style="text-align:center;font-size:18px;font-weight:900;
+        background:linear-gradient(90deg,#ffd700,#ff4dac);
+        background-clip:text;-webkit-text-fill-color:transparent;
+        margin-bottom:4px;">Admin Login</div>
+      <div style="text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-bottom:24px;">
+        Slot Booking Control
+      </div>
+      <div style="margin-bottom:13px;">
+        <div style="font-size:10px;font-weight:700;color:rgba(255,215,0,.7);
+          letter-spacing:.5px;margin-bottom:5px;">USERNAME</div>
+        <input id="adUser" type="text" placeholder="Username"
+          style="width:100%;padding:10px 13px;border-radius:10px;
+          background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.12);
+          color:#fff;font-size:14px;font-family:'Poppins',sans-serif;outline:none;"/>
+      </div>
+      <div style="margin-bottom:18px;">
+        <div style="font-size:10px;font-weight:700;color:rgba(255,215,0,.7);
+          letter-spacing:.5px;margin-bottom:5px;">PASSWORD</div>
+        <input id="adPass" type="password" placeholder="Password"
+          style="width:100%;padding:10px 13px;border-radius:10px;
+          background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.12);
+          color:#fff;font-size:14px;font-family:'Poppins',sans-serif;outline:none;"/>
+      </div>
+      <button onclick="adLogin()" style="
+        width:100%;padding:12px;border-radius:12px;border:none;cursor:pointer;
+        background:linear-gradient(135deg,#ffd700,#ff8c00);
+        color:#1a0035;font-size:15px;font-weight:900;font-family:'Poppins',sans-serif;
+      ">🚀 Login</button>
+      <div id="adErr" style="color:#ff6666;font-size:11px;font-weight:700;
+        text-align:center;margin-top:10px;display:none;">
+        ❌ Wrong credentials!
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="adDash" style="display:none;padding:20px 14px 60px; max-width: 430px; margin: 0 auto;">
+
+    <div style="
+      display:flex;align-items:center;justify-content:space-between;
+      background:linear-gradient(135deg,rgba(80,0,160,.3),rgba(40,0,80,.4));
+      border:1px solid rgba(255,215,0,.2);border-radius:14px;
+      padding:14px;margin-bottom:18px;
+    ">
+      <div>
+        <div style="font-size:15px;font-weight:900;
+          background:linear-gradient(90deg,#ffd700,#ff4dac);
+          background-clip:text;-webkit-text-fill-color:transparent;">
+          🧠 Admin Panel
+        </div>
+        <div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:2px;">
+          Slot Booking Control
+        </div>
+      </div>
+      <button onclick="adLogout()" style="
+        padding:6px 14px;border-radius:30px;cursor:pointer;
+        border:1.5px solid rgba(255,100,100,.4);
+        background:rgba(255,50,50,.12);color:#ff8888;
+        font-size:11px;font-weight:700;font-family:'Poppins',sans-serif;
+      ">⬅ Logout</button>
+    </div>
+
+    <!-- SLOT BOOKING CONTROL SECTION -->
+    <div style="
+      background:linear-gradient(160deg,rgba(0,60,120,.35),rgba(0,30,60,.45));
+      border:1.5px solid rgba(100,180,255,.25);border-radius:16px;
+      padding:20px;margin-top:14px;
+    ">
+      <div style="font-size:12px;font-weight:800;color:rgba(100,200,255,.9);
+        letter-spacing:.5px;margin-bottom:6px;">📅 SLOT BOOKING CONTROL</div>
+      <div style="font-size:10px;color:rgba(255,255,255,.4);margin-bottom:16px;">
+        Set each time slot status — Date chunne ke baad ye slots dikhenge
+      </div>
+
+      <!-- Status legend -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
+        <span style="font-size:10px;font-weight:700;color:#00e676;">✅ Available</span>
+        <span style="font-size:10px;font-weight:700;color:#ffaa00;">⚡ Limited</span>
+        <span style="font-size:10px;font-weight:700;color:#ff4444;">❌ Full</span>
+        <span style="font-size:10px;font-weight:700;color:rgba(255,255,255,.3);">🚫 Hidden</span>
+      </div>
+
+      <!-- Slot rows — generated by JS -->
+      <div id="adSlotRows" style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;"></div>
+
+      <div style="font-size:12px;font-weight:800;color:rgba(100,200,255,.9);
+        letter-spacing:.5px;margin-bottom:6px;margin-top:20px;">🗓️ CALENDAR DATES CONTROL</div>
+      <div style="font-size:10px;color:rgba(255,255,255,.4);margin-bottom:12px;">
+        Type the dates (1 to 31) that are FULL (Red), separated by commas. Other days remain Green.
+      </div>
+      <input id="adBookedDatesInput" type="text" placeholder="e.g. 17, 22, 28" 
+        style="width:100%;padding:10px;border-radius:10px;margin-bottom:16px;
+        background:rgba(0,0,0,.5);border:1px solid rgba(255,215,0,.3);
+        color:#fff;font-size:13px;font-family:'Poppins',sans-serif;outline:none;" />
+
+      <button onclick="adSaveSlots()" style="
+        width:100%;padding:12px;border-radius:12px;border:none;cursor:pointer;
+        background:linear-gradient(135deg,#0077cc,#00aaff);
+        color:#fff;font-size:14px;font-weight:900;font-family:'Poppins',sans-serif;
+      ">💾 Save Slot Settings &amp; Update Live</button>
+      <div id="adSlotMsg" style="
+        text-align:center;font-size:12px;font-weight:700;color:#00e676;
+        margin-top:10px;display:none;
+      ">✅ Slot settings saved! View updated.</div>
+    </div>
+  </div><!-- /adDash -->
+</div><!-- /adminOverlay -->
+
+<script>
+/* ═══════════════════════════════════════
+   SECRET ADMIN — embedded in main page
+   Trigger: click "Course" detail text 5× in 3 sec
+═══════════════════════════════════════ */
+(function(){
+  var AD_USER = 'admin';
+  var AD_PASS = 'mindreading@123';
+  var clicks = 0, timer = null;
+
+  /* Attach secret trigger to summary box (Mind Reading Secret text) */
+  function attachTrigger(){
+    var summaryEl = document.querySelector('.summary-row:first-child .summary-val');
+    if(!summaryEl) return;
+    summaryEl.style.cursor = 'pointer';
+    summaryEl.addEventListener('click', function(){
+      clicks++;
+      clearTimeout(timer);
+      if(clicks >= 5){
+        clicks = 0;
+        openAdmin();
+      } else {
+        timer = setTimeout(function(){ clicks = 0; }, 3000);
+      }
+    });
+  }
+
+  function openAdmin(){
+    var overlay = document.getElementById('adminOverlay');
+    overlay.style.display = 'block';
+    if(typeof window.adRenderSlotRows === 'function') window.adRenderSlotRows();
+  }
+
+  window.adminClose = function(){
+    document.getElementById('adminOverlay').style.display = 'none';
+    document.getElementById('adDash').style.display    = 'none';
+    document.getElementById('adLoginWrap').style.display = 'flex';
+    document.getElementById('adUser').value = '';
+    document.getElementById('adPass').value = '';
+    document.getElementById('adErr').style.display = 'none';
+  };
+
+  window.adLogin = function(){
+    var u = document.getElementById('adUser').value.trim();
+    var p = document.getElementById('adPass').value;
+    if(u === AD_USER && p === AD_PASS){
+      document.getElementById('adLoginWrap').style.display = 'none';
+      document.getElementById('adDash').style.display = 'block';
+    } else {
+      document.getElementById('adErr').style.display = 'block';
+    }
+  };
+
+  /* Enter key support */
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' && document.getElementById('adminOverlay').style.display === 'block'){
+      var wrap = document.getElementById('adLoginWrap');
+      if(wrap.style.display !== 'none') adLogin();
+    }
+  });
+
+  window.adLogout = function(){
+    document.getElementById('adDash').style.display    = 'none';
+    document.getElementById('adLoginWrap').style.display = 'flex';
+    document.getElementById('adUser').value = '';
+    document.getElementById('adPass').value = '';
+  };
+
+  /* ── Time Slot Editor helpers ── */
+  window.adRenderSlotRows = function() {
+    var cont = document.getElementById('adSlotRows');
+    if(!cont) return;
+    cont.innerHTML = '';
+    var slots = window.getSlotConfig ? getSlotConfig() : [];
+    slots.forEach(function(s, idx){
+      var div = document.createElement('div');
+      div.style.display = 'flex';
+      div.style.alignItems = 'center';
+      div.style.justifyContent = 'space-between';
+      div.style.padding = '8px 12px';
+      div.style.background = 'rgba(255,255,255,.05)';
+      div.style.borderRadius = '8px';
+      div.style.border = '1px solid rgba(255,255,255,.1)';
+
+      div.innerHTML = `
+        <div style="font-size:13px;font-weight:700;width:70px;">${s.time}</div>
+        <select id="adSlotSel_${idx}" style="
+          padding:6px;border-radius:6px;background:rgba(0,0,0,.5);color:#fff;
+          border:1px solid rgba(255,215,0,.3);font-family:'Poppins',sans-serif;
+          font-size:12px;outline:none;cursor:pointer;
+        ">
+          <option value="open" ${s.status === 'open' ? 'selected' : ''}>✅ Available</option>
+          <option value="limited" ${s.status === 'limited' ? 'selected' : ''}>⚡ Limited</option>
+          <option value="full" ${s.status === 'full' ? 'selected' : ''}>❌ Full</option>
+          <option value="hidden" ${s.status === 'hidden' ? 'selected' : ''}>🚫 Hidden</option>
+        </select>
+      `;
+      cont.appendChild(div);
+    });
+
+    // Populate booked dates input
+    var bInput = document.getElementById('adBookedDatesInput');
+    if(bInput && window.getBookedDates) {
+      bInput.value = window.getBookedDates().join(', ');
+    }
+  };
+
+  window.adSaveSlots = function() {
+    var slots = window.getSlotConfig ? getSlotConfig() : [];
+    slots.forEach(function(s, idx){
+      var sel = document.getElementById('adSlotSel_'+idx);
+      if(sel) s.status = sel.value;
+    });
+    localStorage.setItem('mr_slot_times', JSON.stringify(slots));
+
+    // Save booked dates
+    var bInput = document.getElementById('adBookedDatesInput');
+    if(bInput) {
+      var arr = bInput.value.split(',').map(v => parseInt(v.trim())).filter(n => !isNaN(n));
+      localStorage.setItem('mr_booked_dates', JSON.stringify(arr));
+    }
+    
+    // Auto-update calendar globally
+    if(typeof window.renderCalendar === 'function') window.renderCalendar();
+    // Auto-update slots if day is selected
+    if(typeof window.renderSlots === 'function' && typeof selectedDate !== 'undefined' && selectedDate) {
+       window.renderSlots(selectedDate.d);
+    }
+
+    var msg = document.getElementById('adSlotMsg');
+    msg.style.display = 'block';
+    setTimeout(function(){ msg.style.display = 'none'; }, 3000);
+  };
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', attachTrigger);
+  } else {
+    attachTrigger();
+  }
+})();
+</script>
+
+</body>
+</html>
