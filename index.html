@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-  <title>Mind Reading Secret – सिर्फ 1 घंटे में सीखें</title>
-  <meta name="description" content="किसी के चेहरे को देखकर पता लगाएं वह क्या सोच रहा है। Mind Reading Secret सिर्फ 1 घंटे में।"/>
+  <title>Slot Book करें – Mind Reading Secret</title>
+  <meta name="description" content="Payment successful! अब अपना Mind Reading Training slot book करें।"/>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -15,7 +15,7 @@
       --purple-light:#7b00ff;
       --gold:        #ffd700;
       --orange:      #ff8c00;
-      --red-cta:     #e61000;
+      --green:       #00e676;
       --pink:        #ff4dac;
     }
 
@@ -28,516 +28,487 @@
     }
 
     /* ============================
-       FULL-PAGE STARFIELD BG
+       STARFIELD BG
     ============================ */
     .stars-bg {
-      position: fixed;
-      inset: 0; z-index: 0;
+      position: fixed; inset: 0; z-index: 0;
       background:
         radial-gradient(ellipse 80% 60% at 50% 0%,  rgba(100,0,200,.55) 0%, transparent 60%),
         radial-gradient(ellipse 60% 40% at 20% 80%, rgba(70,0,160,.4)  0%, transparent 50%),
-        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(50,0,120,.4)  0%, transparent 50%),
         #0d0020;
-      overflow: hidden;
     }
     .stars-bg::after {
-      content:'';
-      position:absolute; inset:0;
+      content:''; position:absolute; inset:0;
       background-image:
         radial-gradient(1px 1px at 10% 15%, #fff 0%, transparent 100%),
         radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,.7) 0%, transparent 100%),
         radial-gradient(1px 1px at 55%  8%, #fff 0%, transparent 100%),
         radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,.6) 0%, transparent 100%),
         radial-gradient(1px 1px at 85% 55%, #fff 0%, transparent 100%),
-        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,.5) 0%, transparent 100%),
-        radial-gradient(1px 1px at 90% 80%, #fff 0%, transparent 100%),
         radial-gradient(2px 2px at 15% 90%, rgba(255,215,0,.8) 0%, transparent 100%),
-        radial-gradient(2px 2px at 60% 85%, rgba(255,100,200,.6) 0%, transparent 100%),
-        radial-gradient(1px 1px at 35% 55%, rgba(100,200,255,.7) 0%, transparent 100%);
+        radial-gradient(2px 2px at 60% 85%, rgba(255,100,200,.6) 0%, transparent 100%);
       animation: twinkle 4s ease-in-out infinite alternate;
     }
-    @keyframes twinkle {
-      from { opacity:.7; } to { opacity:1; }
-    }
+    @keyframes twinkle { from{opacity:.7;} to{opacity:1;} }
 
-    /* WRAPPER */
     .page {
       position: relative; z-index: 1;
       max-width: 430px;
       margin: 0 auto;
       min-height: 100vh;
+      padding-bottom: 40px;
     }
 
     /* ============================
-       TOP LANGUAGE BAR
+       SUCCESS BANNER
     ============================ */
-    .lang-bar {
-      background: rgba(20,0,60,.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1.5px solid rgba(255,215,0,.25);
-      padding: 10px 16px;
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      position: sticky; top: 0; z-index: 99;
-    }
-    .lang-bar-label { font-size: 12px; color: var(--gold); font-weight: 700; letter-spacing:.5px; }
-    .lang-btn {
-      background: rgba(123,0,255,.25);
-      border: 1.5px solid rgba(255,215,0,.3);
-      color: #ddd; padding: 4px 12px;
-      border-radius: 20px; font-size: 12px; font-weight: 600;
-      cursor: pointer; transition: all .25s;
-    }
-    .lang-btn.active, .lang-btn:hover {
-      background: linear-gradient(135deg,#ffd700,#ff8c00);
-      color: #1a0040; border-color: transparent;
-    }
-
-    /* ============================
-       HERO SECTION
-    ============================ */
-    .hero {
-      padding: 26px 16px 0;
+    .success-banner {
+      background: linear-gradient(135deg, #003300, #006600, #00aa44);
+      padding: 18px 16px;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
-
-    /* Glow orb behind */
-    .hero::before {
-      content:'';
-      position:absolute; left:50%; top:40%;
-      transform:translate(-50%,-50%);
-      width:320px; height:320px;
-      border-radius:50%;
-      background: radial-gradient(circle, rgba(160,0,255,.35) 0%, transparent 70%);
-      pointer-events:none;
+    .success-banner::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent);
+      animation: shimmer 2.5s infinite;
     }
-
-    .brain-tag {
-      display: inline-flex; align-items: center; gap: 7px;
-      background: rgba(255,255,255,.08);
-      border: 1.5px solid rgba(255,215,0,.3);
-      border-radius: 30px; padding: 5px 14px;
-      font-size: 12px; color: var(--gold); font-weight: 700;
-      letter-spacing: .5px; margin-bottom: 12px;
+    @keyframes shimmer { 100%{ transform: translateX(200%); } }
+    .success-banner::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, transparent 0%, transparent 100%);
     }
-    .brain-tag span { font-size: 16px; animation: brain-pulse 2s infinite; }
-    @keyframes brain-pulse {
-      0%,100%{ transform:scale(1);   filter:drop-shadow(0 0 4px #a000ff); }
-      50%    { transform:scale(1.2); filter:drop-shadow(0 0 12px #ff8c00);}
-    }
-
-    /* Headline */
-    .hero-headline {
-      font-family:'Noto Sans Devanagari', sans-serif;
-      font-weight: 900;
-      line-height: 1.2;
-      margin-bottom: 8px;
-    }
-    .hero-headline .line1 {
-      font-size: 20px; color: #e8c8ff; display:block;
-    }
-    .hero-headline .line1 strong { color:#fff; }
-    .hero-headline .line2 {
-      font-size: 30px;
-      background: linear-gradient(90deg, #ffd700, #ff8c00);
-      -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
-      display:block; margin: 2px 0;
-      text-shadow: none;
-      filter: drop-shadow(0 0 10px rgba(255,200,0,.5));
-    }
-    .hero-headline .line3 { font-size:26px; color:#ff9eee; display:block; }
-
-    /* Sub text */
-    .hero-sub {
-      font-family:'Noto Sans Devanagari', sans-serif;
-      font-size: 15px; font-weight: 600;
-      color: #d8c0ff; line-height: 1.7;
-      margin: 10px 0 4px;
-    }
-    .hero-sub .qs {
-      color: var(--gold); font-size: 20px;
-      display: inline-block;
-      animation: bounce-q 1.5s infinite alternate;
-    }
-    @keyframes bounce-q {
-      from { transform: translateY(0);   }
-      to   { transform: translateY(-4px);}
-    }
-
-    /* ============================
-       MIND VISUAL — real photo
-    ============================ */
-    .mind-visual {
-      position: relative;
-      margin: 18px auto 10px;
-      border-radius: 20px;
-      overflow: hidden;
-      width: 100%;
-      max-width: 398px;
-    }
-
-    /* Real hero photo */
-    .mind-photo {
-      width: 100%;
+    .s-check {
+      font-size: 44px;
       display: block;
-      border-radius: 20px;
-      filter: brightness(.85) saturate(1.3);
-      transition: filter .4s;
+      animation: check-pop .6s cubic-bezier(.36,.07,.19,.97);
     }
-    .mind-photo:hover { filter: brightness(1) saturate(1.5); }
-
-    /* Dark gradient overlay bottom */
-    .mind-photo-overlay {
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, rgba(60,0,120,.45) 0%, transparent 40%, rgba(10,0,30,.85) 100%),
-        radial-gradient(ellipse 100% 55% at 50% 0%, rgba(160,0,255,.25) 0%, transparent 60%);
-      border-radius: 20px;
-      pointer-events: none;
+    @keyframes check-pop {
+      0%  { transform: scale(0) rotate(-30deg); opacity: 0; }
+      70% { transform: scale(1.2) rotate(5deg); }
+      100%{ transform: scale(1) rotate(0deg); opacity: 1; }
     }
-
-    /* Brain glow orbs on heads */
-    .brain-glow-left {
-      position: absolute;
-      top: 6%; left: 14%;
-      width: 70px; height: 70px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,140,0,.75) 0%, rgba(160,0,255,.5) 50%, transparent 75%);
-      animation: glow-left 2s ease-in-out infinite alternate;
-      pointer-events: none;
-      z-index: 3;
+    .s-title {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 20px; font-weight: 900;
+      color: #fff; margin: 6px 0 2px;
     }
-    .brain-glow-right {
-      position: absolute;
-      top: 6%; right: 14%;
-      width: 70px; height: 70px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,60,200,.75) 0%, rgba(160,0,255,.5) 50%, transparent 75%);
-      animation: glow-right 2s ease-in-out infinite alternate;
-      pointer-events: none;
-      z-index: 3;
+    .s-sub {
+      font-size: 13px; color: rgba(255,255,255,.85);
+      font-family: 'Noto Sans Devanagari', sans-serif;
     }
-    @keyframes glow-left  { from{transform:scale(1);   opacity:.8;} to{transform:scale(1.4); opacity:1;} }
-    @keyframes glow-right { from{transform:scale(1.1); opacity:.8;} to{transform:scale(1.5); opacity:1;} }
-
-    /* Brain emoji on each glow */
-    .brain-glow-left::after,
-    .brain-glow-right::after {
-      content: '🧠';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%,-50%);
-      font-size: 26px;
-      filter: drop-shadow(0 0 6px #fff);
-    }
-
-    /* Telepathy wave SVG overlay */
-    .wave-overlay {
-      position: absolute;
-      top: 8%; left: 0; right: 0;
-      height: 55%;
-      z-index: 4;
-      pointer-events: none;
-    }
-
-    /* Floating icons */
-    .float-icons {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 5;
-    }
-    .fi {
-      position: absolute;
-      font-size: 20px;
-      animation: fi-float 3s ease-in-out infinite alternate;
-      filter: drop-shadow(0 0 7px rgba(255,215,0,.9));
-    }
-    .fi-1 { top:22%; left:38%; animation-delay:0s;  }
-    .fi-2 { top:12%; left:55%; animation-delay:.5s; }
-    .fi-3 { top:35%; left:44%; animation-delay:1s;  }
-    .fi-4 { top:48%; left:36%; animation-delay:.7s; }
-    .fi-5 { top:20%; left:48%; animation-delay:1.4s;}
-    @keyframes fi-float {
-      from { transform:translateY(0) scale(1);    }
-      to   { transform:translateY(-9px) scale(1.1); }
-    }
-
-    /* Neural network dots on photo */
-    .neural-dots {
-      position: absolute;
-      inset: 0; z-index: 4;
-      pointer-events: none;
+    .s-amount {
+      display: inline-block;
+      background: rgba(255,255,255,.2);
+      border: 1.5px solid rgba(255,255,255,.4);
+      border-radius: 30px;
+      padding: 4px 16px;
+      font-size: 13px; font-weight: 700;
+      margin-top: 8px;
+      color: #fff;
     }
 
     /* ============================
-       SECRET TRICK BANNER
+       STEP INDICATOR
     ============================ */
-    .trick-banner {
-      background: linear-gradient(135deg, #c72000, #ff3300, #ff6600);
-      padding: 11px 16px;
-      text-align: center;
-      font-family:'Noto Sans Devanagari', sans-serif;
-      font-size: 14px; font-weight: 700;
-      box-shadow: 0 4px 20px rgba(255,80,0,.5);
-      animation: trick-pulse 2s infinite alternate;
+    .steps {
+      display: flex; align-items: center; justify-content: center;
+      gap: 6px; padding: 16px 16px 0;
     }
-    @keyframes trick-pulse {
-      from{ box-shadow:0 4px 20px rgba(255,80,0,.5); }
-      to  { box-shadow:0 4px 30px rgba(255,80,0,.9), 0 0 60px rgba(255,50,0,.3); }
+    .step {
+      display: flex; flex-direction: column; align-items: center; gap: 3px;
+      font-size: 10px; color: #888; font-weight: 600;
     }
-    .trick-banner .gold { color: var(--gold); font-size:16px; }
+    .step-dot {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 2px solid #333;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700;
+      background: rgba(255,255,255,.05);
+      color: #666;
+    }
+    .step.done .step-dot {
+      background: var(--green); border-color: var(--green); color: #000;
+    }
+    .step.active .step-dot {
+      background: linear-gradient(135deg, var(--purple-light), var(--pink));
+      border-color: transparent; color: #fff;
+      box-shadow: 0 0 14px rgba(123,0,255,.6);
+    }
+    .step.done { color: var(--green); }
+    .step.active { color: #fff; }
+    .step-line {
+      flex: 1; height: 2px;
+      background: linear-gradient(90deg, var(--green), #444);
+      border-radius: 2px; margin-bottom: 14px;
+    }
 
     /* ============================
-       DURATION PILL
+       SECTION CARD
     ============================ */
-    .duration-pill {
-      display: flex; align-items:center; justify-content:center; gap:10px;
-      background: rgba(255,215,0,.08);
-      border: 2px solid rgba(255,215,0,.3);
-      border-radius: 50px; padding:10px 22px;
-      margin: 14px auto; width: fit-content;
-      font-size:13px; color:#ffe580; font-weight:600;
+    .card {
+      background: linear-gradient(160deg, rgba(30,0,70,.85), rgba(10,0,35,.9));
+      border: 1.5px solid rgba(255,215,0,.2);
+      border-radius: 18px;
+      margin: 14px 16px 0;
+      padding: 18px;
+      backdrop-filter: blur(10px);
     }
-    .dur-clock { font-size:22px; animation:spin-slow 8s linear infinite; }
-    @keyframes spin-slow{ 100%{transform:rotate(360deg);} }
-    .dur-num { font-size:22px; font-weight:900; color:var(--gold); }
+    .card-title {
+      font-size: 15px; font-weight: 800;
+      color: var(--gold);
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 14px;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+    }
 
     /* ============================
-       COUNTDOWN
+       CALENDAR
     ============================ */
-    .countdown-wrap {
-      background: linear-gradient(135deg,rgba(100,0,0,.3),rgba(40,0,0,.4));
-      border: 2px solid rgba(255,60,0,.35);
-      border-radius: 14px;
-      margin: 0 16px 14px;
-      padding: 13px 16px;
-      text-align:center;
+    .cal-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 12px;
     }
-    .cd-title { font-size:12px; color:#ff9a9a; font-weight:700; margin-bottom:10px; font-family:'Noto Sans Devanagari',sans-serif; }
-    .timer { display:flex; justify-content:center; gap:8px; }
-    .t-blk { background:rgba(255,50,0,.2); border:2px solid rgba(255,60,0,.5); border-radius:10px; padding:8px 14px; min-width:58px; }
-    .t-num { font-size:26px; font-weight:900; color:#ff6b6b; display:block; }
-    .t-lbl { font-size:9px; color:#aaa; text-transform:uppercase; }
-    .t-sep { font-size:26px; font-weight:900; color:#ff6b6b; align-self:center; }
+    .cal-month {
+      font-size: 15px; font-weight: 800; color: #fff;
+    }
+    .cal-nav {
+      background: rgba(123,0,255,.25);
+      border: 1.5px solid rgba(123,0,255,.4);
+      border-radius: 8px; padding: 4px 10px;
+      color: #fff; font-size: 14px; font-weight: 700;
+      cursor: pointer; transition: all .2s;
+    }
+    .cal-nav:hover {
+      background: rgba(123,0,255,.5);
+      box-shadow: 0 0 10px rgba(123,0,255,.4);
+    }
+    .cal-grid {
+      display: grid; grid-template-columns: repeat(7, 1fr);
+      gap: 4px; text-align: center;
+    }
+    .cal-day-label {
+      font-size: 10px; color: #a080cc; font-weight: 700;
+      padding: 4px 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    .cal-day {
+      aspect-ratio: 1;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 600;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: all .2s;
+      position: relative;
+    }
+    .cal-day:hover:not(.disabled):not(.blank) {
+      background: rgba(123,0,255,.3);
+      border-color: rgba(123,0,255,.5);
+      transform: scale(1.1);
+    }
+    .cal-day.today {
+      border-color: rgba(255,215,0,.5);
+      color: var(--gold);
+    }
+    .cal-day.selected {
+      background: linear-gradient(135deg, #7b00ff, #ff4dac);
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(123,0,255,.5);
+      transform: scale(1.12);
+      font-weight: 900;
+    }
+    .cal-day.past, .cal-day.disabled {
+      color: #333; cursor: not-allowed;
+      background: transparent; border-color: transparent;
+    }
+    .cal-day.blank { cursor: default; }
+    .cal-day.booked {
+      background: rgba(255,50,50,.15);
+      border-color: rgba(255,50,50,.3);
+      color: #ff6b6b;
+      cursor: not-allowed;
+    }
+    .cal-day.booked::after {
+      content: '';
+      position: absolute; bottom: 3px; left: 50%;
+      transform: translateX(-50%);
+      width: 4px; height: 4px; border-radius: 50%;
+      background: #ff6b6b;
+    }
+    .cal-day.available::after {
+      content: '';
+      position: absolute; bottom: 3px; left: 50%;
+      transform: translateX(-50%);
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--green);
+    }
+
+    /* Calendar legend */
+    .cal-legend {
+      display: flex; gap: 14px; flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .legend-item {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 10px; color: #999; font-weight: 600;
+    }
+    .legend-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+    }
 
     /* ============================
-       FEATURE CARDS
+       TIME SLOTS
     ============================ */
-    .features { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; padding:0 16px 16px; }
-    .feat-card {
-      background: linear-gradient(150deg, rgba(255,215,0,.1), rgba(255,140,0,.06));
-      border: 1.5px solid rgba(255,215,0,.22);
-      border-radius: 14px; padding:14px 8px;
-      text-align:center; cursor:pointer;
-      transition: all .3s;
+    .slots-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 8px;
     }
-    .feat-card:hover { transform:translateY(-5px); border-color:rgba(255,215,0,.6); box-shadow:0 8px 24px rgba(255,140,0,.25); }
-    .feat-ico { font-size:28px; margin-bottom:8px; display:block; }
-    .feat-check { color:#00e676; font-size:11px; font-weight:700; display:block; margin-bottom:3px; }
-    .feat-title { font-size:11px; color:#f0d8ff; line-height:1.4; font-family:'Noto Sans Devanagari',sans-serif; font-weight:600; }
-    .feat-title b { color:var(--gold); font-size:13px; display:block; }
+    .slot {
+      background: rgba(255,255,255,.05);
+      border: 1.5px solid rgba(255,255,255,.12);
+      border-radius: 12px; padding: 12px 10px;
+      text-align: center; cursor: pointer;
+      transition: all .25s;
+      position: relative; overflow: hidden;
+    }
+    .slot:hover:not(.slot-full):not(.slot-selected) {
+      background: rgba(123,0,255,.2);
+      border-color: rgba(123,0,255,.5);
+      transform: translateY(-2px);
+    }
+    .slot.slot-selected {
+      background: linear-gradient(135deg, rgba(123,0,255,.4), rgba(255,77,172,.3));
+      border-color: var(--purple-light);
+      box-shadow: 0 4px 16px rgba(123,0,255,.35);
+    }
+    .slot.slot-full {
+      background: rgba(255,50,50,.08);
+      border-color: rgba(255,50,50,.2);
+      cursor: not-allowed; opacity: .6;
+    }
+    .slot-time {
+      font-size: 15px; font-weight: 800;
+      color: #fff; display: block;
+    }
+    .slot-period {
+      font-size: 10px; font-weight: 600;
+      color: #a080cc; display: block; margin-top: 2px;
+    }
+    .slot-avail {
+      font-size: 10px; font-weight: 700;
+      margin-top: 5px; display: block;
+    }
+    .slot-available { color: var(--green); }
+    .slot-limited { color: var(--orange); }
+    .slot-full-text { color: #ff6b6b; }
+    .slot-check {
+      position: absolute; top: 5px; right: 7px;
+      font-size: 12px;
+      opacity: 0; transition: opacity .2s;
+    }
+    .slot.slot-selected .slot-check { opacity: 1; }
 
     /* ============================
-       PRICING BOX
+       USER DETAILS FORM
     ============================ */
-    .pricing { padding:0 16px 14px; }
-    .price-card {
-      background: linear-gradient(160deg,rgba(30,0,70,.9),rgba(15,0,40,.95));
-      border: 2px solid rgba(255,215,0,.35);
-      border-radius: 18px; padding:20px;
-      text-align:center; position:relative; overflow:hidden;
+    .form-group { margin-bottom: 12px; }
+    .form-label {
+      display: block; font-size: 12px; font-weight: 700;
+      color: #c0a8ff; margin-bottom: 6px;
+      font-family: 'Noto Sans Devanagari', sans-serif;
     }
-    .price-card::before {
-      content:'';
-      position:absolute; left:50%; top:0;
-      transform:translateX(-50%);
-      width:200px; height:80px;
-      background:radial-gradient(ellipse, rgba(255,215,0,.15), transparent 70%);
-      pointer-events:none;
+    .form-input {
+      width: 100%;
+      background: rgba(255,255,255,.07);
+      border: 1.5px solid rgba(255,255,255,.15);
+      border-radius: 10px;
+      padding: 11px 14px;
+      color: #fff; font-size: 14px;
+      font-family: 'Poppins', sans-serif;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
     }
-    .price-old { font-size:15px; color:#888; text-decoration:line-through; margin-bottom:2px; }
-    .price-new {
-      font-size:52px; font-weight:900;
-      background:linear-gradient(135deg,#ffd700,#ff8c00);
-      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-      line-height:1;
-      filter:drop-shadow(0 0 15px rgba(255,200,0,.5));
+    .form-input::placeholder { color: #666; }
+    .form-input:focus {
+      border-color: var(--purple-light);
+      box-shadow: 0 0 12px rgba(123,0,255,.3);
     }
-    .price-new sup { font-size:26px; vertical-align:super; }
-    .price-tag { font-family:'Noto Sans Devanagari',sans-serif; color:#ff9a00; font-size:13px; font-weight:600; margin:6px 0 14px; }
-    .pay-badges { display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:10px; }
-    .pbadge { display:flex; align-items:center; gap:5px; font-size:12px; color:#c0a8ff; font-weight:600; }
-    .pbadge .ck { color:#00e676; }
-    .pay-row { display:flex; justify-content:center; gap:8px; flex-wrap:wrap; }
-    .pay-chip {
-      background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2);
-      border-radius:7px; padding:5px 12px;
-      font-size:11px; font-weight:700; color:#fff;
-    }
-    .pay-chip.upi  { background:linear-gradient(135deg,#6200ea,#311b92); color:var(--gold); }
-    .pay-chip.gpay { background:linear-gradient(135deg,#1a73e8,#0d47a1); }
-    .pay-chip.paytm{ background:linear-gradient(135deg,#002970,#00baf2); }
 
     /* ============================
-       GUARANTEE BAR
+       SUMMARY BOX
     ============================ */
-    .guarantee {
-      margin:0 16px 14px;
-      background:rgba(0,20,60,.6);
-      border:1.5px solid rgba(80,120,255,.25);
-      border-radius:12px; padding:12px 14px;
-      display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+    .summary-box {
+      background: rgba(255,215,0,.06);
+      border: 1.5px solid rgba(255,215,0,.25);
+      border-radius: 12px;
+      padding: 14px;
+      margin-top: 14px;
     }
-    .g-lock { font-size:22px; }
-    .g-text { font-size:12px; color:#c0c8ff; font-weight:600; font-family:'Noto Sans Devanagari',sans-serif; flex:1; }
-    .g-text span { color:var(--gold); }
-    .g-chips { display:flex; gap:6px; }
-    .g-chip { background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.15); border-radius:5px; padding:3px 8px; font-size:10px; font-weight:700; }
+    .summary-title {
+      font-size: 12px; font-weight: 700; color: var(--gold);
+      margin-bottom: 10px;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+    }
+    .summary-row {
+      display: flex; justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      font-size: 12px;
+    }
+    .summary-row:last-child { border-bottom: none; }
+    .summary-key { color: #aaa; }
+    .summary-val { color: #fff; font-weight: 700; }
+    .summary-val.gold { color: var(--gold); }
 
     /* ============================
-       CTA BUTTON
+       CONFIRM BUTTON
     ============================ */
-    .cta-wrap { padding:0 16px 14px; }
-    .cta-btn {
-      display:flex; align-items:center; justify-content:center; gap:10px;
-      width:100%;
-      background:linear-gradient(135deg,#b80000,#e61000,#ff3300,#ff6600);
-      border:none; border-radius:16px;
-      padding:18px 16px;
-      color:#fff; text-decoration:none;
-      font-family:'Noto Sans Devanagari',sans-serif;
-      font-size:17px; font-weight:900;
-      cursor:pointer; position:relative; overflow:hidden;
-      box-shadow: 0 8px 30px rgba(255,50,0,.55), 0 0 0 3px rgba(255,150,0,.25);
+    .confirm-wrap { padding: 14px 16px 0; }
+    .confirm-btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%;
+      background: linear-gradient(135deg, #006600, #00aa44, #00cc55);
+      border: none; border-radius: 16px;
+      padding: 18px 16px;
+      color: #fff;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 17px; font-weight: 900;
+      cursor: pointer; position: relative; overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,200,80,.45);
       animation: cta-glow 2.5s infinite;
       transition: transform .2s;
+      border: none;
     }
-    .cta-btn::after {
-      content:'';
-      position:absolute; inset:0;
-      background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);
-      transform:translateX(-100%);
-      animation:shimmer 2s infinite;
+    .confirm-btn::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent);
+      transform: translateX(-100%);
+      animation: shimmer-btn 2s infinite;
     }
-    @keyframes shimmer{ 100%{transform:translateX(100%);} }
+    @keyframes shimmer-btn { 100%{ transform: translateX(200%); } }
     @keyframes cta-glow {
-      0%,100%{ box-shadow:0 8px 30px rgba(255,50,0,.55), 0 0 0 3px rgba(255,150,0,.25);}
-      50%    { box-shadow:0 8px 40px rgba(255,50,0,.85), 0 0 0 7px rgba(255,150,0,.12);}
+      0%,100%{ box-shadow: 0 8px 30px rgba(0,200,80,.45); }
+      50%    { box-shadow: 0 8px 40px rgba(0,200,80,.75), 0 0 0 6px rgba(0,200,80,.12); }
     }
-    .cta-btn:hover { transform:translateY(-2px) scale(1.02); }
-    .cta-btn:active{ transform:scale(.98); }
-    .cta-rocket { font-size:24px; animation:rocket-jump 1s infinite alternate; }
-    @keyframes rocket-jump { from{transform:translateY(0);} to{transform:translateY(-5px);} }
-    .cta-texts { display:flex; flex-direction:column; align-items:flex-start; }
-    .cta-main { font-size:17px; font-weight:900; text-shadow:0 2px 4px rgba(0,0,0,.4); }
-    .cta-sub  { font-size:11px; font-weight:500; color:rgba(255,255,255,.8); margin-top:1px; }
+    .confirm-btn:hover { transform: translateY(-2px) scale(1.02); }
+    .confirm-btn:active { transform: scale(.98); }
+    .confirm-btn:disabled {
+      background: #333; cursor: not-allowed;
+      box-shadow: none; animation: none;
+    }
+    .confirm-btn:disabled::after { display: none; }
 
-    /* Warning popup */
-    .warn-popup {
+    /* ============================
+       SUCCESS MODAL
+    ============================ */
+    .modal-overlay {
       display: none;
       position: fixed; inset: 0; z-index: 999;
-      background: rgba(0,0,0,.82);
+      background: rgba(0,0,0,.85);
       backdrop-filter: blur(8px);
       align-items: center; justify-content: center;
       padding: 20px;
     }
-    .warn-popup.open { display: flex; }
-    .warn-box {
-      background: linear-gradient(160deg, #1a0000, #2a0000);
-      border: 2px solid rgba(255,80,0,.5);
-      border-radius: 22px;
-      padding: 28px 22px;
+    .modal-overlay.show { display: flex; }
+    .modal-box {
+      background: linear-gradient(160deg, #1a0040, #0a0020);
+      border: 2px solid rgba(0,200,80,.4);
+      border-radius: 24px;
+      padding: 30px 24px;
       text-align: center;
-      max-width: 340px; width: 100%;
-      animation: warn-in .35s cubic-bezier(.36,.07,.19,.97);
+      max-width: 360px; width: 100%;
+      position: relative;
+      animation: modal-in .4s cubic-bezier(.36,.07,.19,.97);
     }
-    @keyframes warn-in {
-      from { transform: scale(.85); opacity:0; }
-      to   { transform: scale(1);   opacity:1; }
+    @keyframes modal-in {
+      from { transform: scale(.8) translateY(30px); opacity: 0; }
+      to   { transform: scale(1) translateY(0); opacity: 1; }
     }
-    .warn-icon  { font-size: 52px; display:block; margin-bottom:12px; }
-    .warn-title {
-      font-size: 19px; font-weight: 900; color: #ff6b6b;
-      margin-bottom: 8px;
+    .modal-icon { font-size: 60px; display: block; margin-bottom: 12px; animation: bounce-in .6s .2s both; }
+    @keyframes bounce-in {
+      0%  { transform: scale(0); }
+      60% { transform: scale(1.2); }
+      100%{ transform: scale(1); }
     }
-    .warn-msg {
-      font-size: 13px; color: #ccc; line-height: 1.65;
-      margin-bottom: 20px;
+    .modal-title {
+      font-size: 22px; font-weight: 900; color: var(--green);
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      margin-bottom: 6px;
     }
-    .warn-msg strong { color: #fff; }
-    .warn-pay-btn {
-      display: block; width: 100%;
-      background: linear-gradient(135deg,#b80000,#e61000,#ff6600);
-      border: none; border-radius: 13px;
-      padding: 14px;
-      color: #fff; font-size: 15px; font-weight: 900;
-      cursor: pointer; margin-bottom: 10px;
-      font-family: 'Poppins', sans-serif;
-      transition: transform .2s;
+    .modal-sub {
+      font-size: 13px; color: #bbb;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      line-height: 1.6; margin-bottom: 18px;
     }
-    .warn-pay-btn:hover { transform: translateY(-2px); }
-    .warn-cancel-btn {
-      display: block; width: 100%;
-      background: transparent;
-      border: 1.5px solid rgba(255,255,255,.15);
-      border-radius: 13px; padding: 11px;
-      color: #888; font-size: 13px; font-weight: 600;
-      cursor: pointer;
-      font-family: 'Poppins', sans-serif;
-      transition: all .2s;
+    .modal-detail {
+      background: rgba(0,200,80,.1);
+      border: 1px solid rgba(0,200,80,.25);
+      border-radius: 12px; padding: 14px;
+      margin-bottom: 18px; text-align: left;
     }
-    .warn-cancel-btn:hover { color:#fff; border-color:rgba(255,255,255,.3); }
+    .modal-detail-row {
+      display: flex; justify-content: space-between;
+      font-size: 12px; padding: 4px 0;
+    }
+    .modal-detail-key { color: #888; }
+    .modal-detail-val { color: #fff; font-weight: 700; }
+    .modal-close {
+      background: linear-gradient(135deg, #006600, #00aa44);
+      border: none; border-radius: 12px;
+      padding: 13px 30px;
+      color: #fff; font-size: 15px; font-weight: 800;
+      cursor: pointer; width: 100%;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+    }
+    .confetti {
+      position: absolute; top: -10px; left: 0; right: 0;
+      display: flex; justify-content: space-around;
+      font-size: 20px;
+      pointer-events: none;
+    }
+    .confetti span { animation: confetti-fall 2s ease-in infinite; }
+    .confetti span:nth-child(2) { animation-delay: .3s; }
+    .confetti span:nth-child(3) { animation-delay: .6s; }
+    .confetti span:nth-child(4) { animation-delay: .9s; }
+    .confetti span:nth-child(5) { animation-delay: 1.2s; }
+    @keyframes confetti-fall {
+      0%  { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+      100%{ transform: translateY(80px) rotate(360deg); opacity: 0; }
+    }
 
     /* ============================
-       TESTIMONIALS
+       NOTICE / ALERT
     ============================ */
-    .testi { padding:0 16px 14px; }
-    .sec-title { font-size:17px; font-weight:900; color:var(--gold); text-align:center; margin-bottom:14px; font-family:'Noto Sans Devanagari',sans-serif; }
-    /* Bilingual sub-text style */
-    .en { display:block; font-size:.88em; font-weight:600; color:rgba(255,220,255,.72); font-family:'Poppins',sans-serif; margin-top:4px; letter-spacing:.3px; }
-    .t-card {
-      background:linear-gradient(160deg,rgba(70,0,140,.3),rgba(30,0,60,.4));
-      border:1.5px solid rgba(255,215,0,.18);
-      border-radius:14px; padding:14px; margin-bottom:10px;
-      transition:transform .3s;
+    .notice {
+      margin: 10px 16px 0;
+      background: rgba(255,140,0,.1);
+      border: 1.5px solid rgba(255,140,0,.3);
+      border-radius: 12px;
+      padding: 10px 14px;
+      display: flex; gap: 8px; align-items: flex-start;
+      font-size: 12px; color: #ffcc88; font-weight: 600;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      line-height: 1.5;
     }
-    .t-card:hover{ transform:translateY(-3px); }
-    .t-top { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
-    .t-av { width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,#7b00ff,#ff00cc); display:flex; align-items:center; justify-content:center; font-size:20px; border:2px solid rgba(255,215,0,.3); }
-    .t-name { font-size:13px; font-weight:700; color:#fff; }
-    .t-stars { color:var(--gold); font-size:12px; }
-    .t-msg { font-size:12.5px; color:#c8a8ff; line-height:1.6; font-family:'Noto Sans Devanagari',sans-serif; }
 
-    /* ============================
-       WHATSAPP FLOAT
-    ============================ */
-    .wa-float {
-      position:fixed; bottom:22px; right:14px;
-      background:linear-gradient(135deg,#25d366,#128c7e);
-      border-radius:50px;
-      padding:10px 16px;
-      display:flex; align-items:center; gap:8px;
-      font-size:13px; font-weight:700; color:#fff;
-      text-decoration:none;
-      box-shadow:0 6px 20px rgba(37,211,102,.55);
-      z-index:200;
-      animation:wa-float 2s ease-in-out infinite alternate;
-    }
-    @keyframes wa-float {
-      from{transform:translateY(0);   box-shadow:0 6px 20px rgba(37,211,102,.55);}
-      to  {transform:translateY(-5px);box-shadow:0 12px 28px rgba(37,211,102,.8);}
-    }
-    .wa-float:hover{ transform:scale(1.06); }
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: #0d0020; }
+    ::-webkit-scrollbar-thumb { background: #7b00ff; border-radius: 4px; }
 
-    /* ============================
-       SCROLLBAR
-    ============================ */
-    ::-webkit-scrollbar{ width:3px; }
-    ::-webkit-scrollbar-track{ background:#0d0020; }
-    ::-webkit-scrollbar-thumb{ background:#7b00ff; border-radius:4px; }
+    /* Disabled state for inactive sections */
+    .section-disabled {
+      opacity: .4;
+      pointer-events: none;
+      filter: grayscale(.5);
+    }
   </style>
 </head>
 <body>
@@ -546,1280 +517,437 @@
 
 <div class="page">
 
+  <!-- SUCCESS BANNER -->
+  <div class="success-banner">
+    <span class="s-check">✅</span>
+    <div class="s-title">Payment Successful! 🎉</div>
+    <div class="s-sub">₹499 का भुगतान हो गया। अब अपना Training Slot book करें!</div>
+    <span class="s-amount">💳 Order Confirmed · Mind Reading Secret</span>
+  </div>
 
+  <!-- STEP INDICATOR -->
+  <div class="steps">
+    <div class="step done">
+      <div class="step-dot">✓</div>
+      <span>Payment</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step active">
+      <div class="step-dot">2</div>
+      <span>Date चुनें</span>
+    </div>
+    <div class="step-line" style="background: linear-gradient(90deg,#444,#444);"></div>
+    <div class="step">
+      <div class="step-dot">3</div>
+      <span>Confirmed</span>
+    </div>
+  </div>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="brain-tag">
-      <span>🧠</span> Mind Reading
+  <!-- NOTICE -->
+  <div class="notice">
+    ⚠️ &nbsp;Training slot सीमित हैं। नीचे date और time slot चुनकर अभी book करें — देरी करने पर slot full हो सकता है!
+  </div>
+
+  <!-- CALENDAR SECTION -->
+  <div class="card">
+    <div class="card-title">📅 Training Date चुनें</div>
+
+    <!-- Calendar Header -->
+    <div class="cal-header">
+      <button class="cal-nav" id="prevMonth" onclick="changeMonth(-1)">&#8592;</button>
+      <div class="cal-month" id="calMonthLabel">March 2026</div>
+      <button class="cal-nav" id="nextMonth" onclick="changeMonth(1)">&#8594;</button>
     </div>
 
-    <h1 class="hero-headline">
-      <span class="line1">सिर्फ <strong>1 घंटे</strong> में सीखें <span class="en" style="font-size:.5em;color:rgba(255,220,255,.5)">Learn in just 1 Hour</span></span>
-      <span class="line2">Mind Reading Secret ✨</span>
-    </h1>
-
-    <!-- REAL PHOTO MIND VISUAL – Heading ke neeche -->
-    <div class="mind-visual">
-
-      <!-- Real photo -->
-      <img
-        src="https://i0.wp.com/eetimes.com/wp-content/uploads/max-0282-01.jpg?w=640&ssl=1"
-        alt="Man and Woman Mind Reading – Brain Telepathy"
-        class="mind-photo"
-        loading="eager"
-      />
-
-      <!-- Colour overlay -->
-      <div class="mind-photo-overlay"></div>
-
-      <!-- Brain glow left (on man's head) -->
-      <div class="brain-glow-left"></div>
-
-      <!-- Brain glow right (on woman's head) -->
-      <div class="brain-glow-right"></div>
-
-      <!-- Telepathy wave SVG -->
-      <svg class="wave-overlay" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="wg2" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%"   stop-color="#ff8c00" stop-opacity=".9"/>
-            <stop offset="40%"  stop-color="#ff00cc" stop-opacity=".9"/>
-            <stop offset="70%"  stop-color="#ffd700" stop-opacity=".9"/>
-            <stop offset="100%" stop-color="#ff4dac" stop-opacity=".9"/>
-          </linearGradient>
-        </defs>
-        <path d="M80,90 C120,40 160,140 200,90 C240,40 280,140 320,90" stroke="url(#wg2)" stroke-width="3" fill="none" opacity=".9">
-          <animate attributeName="d" dur="1.8s" repeatCount="indefinite"
-            values="M80,90 C120,40 160,140 200,90 C240,40 280,140 320,90;
-                    M80,90 C120,140 160,40 200,90 C240,140 280,40 320,90;
-                    M80,90 C120,40 160,140 200,90 C240,40 280,140 320,90"/>
-        </path>
-        <path d="M80,110 C130,70 170,150 200,110 C230,70 270,150 320,110" stroke="rgba(160,0,255,.6)" stroke-width="1.8" fill="none">
-          <animate attributeName="d" dur="2.4s" repeatCount="indefinite"
-            values="M80,110 C130,70 170,150 200,110 C230,70 270,150 320,110;
-                    M80,110 C130,150 170,70 200,110 C230,150 270,70 320,110;
-                    M80,110 C130,70 170,150 200,110 C230,70 270,150 320,110"/>
-        </path>
-        <circle cx="200" cy="90" r="6" fill="#ff8c00">
-          <animate attributeName="r"       values="4;10;4" dur="1.6s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="1;.2;1"  dur="1.6s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="140" cy="72" r="4" fill="#ffd700">
-          <animate attributeName="r"       values="3;7;3" dur="2s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="1;.3;1" dur="2s" repeatCount="indefinite"/>
-        </circle>
-        <circle cx="260" cy="72" r="4" fill="#ff4dac">
-          <animate attributeName="r"       values="3;7;3" dur="2.4s" repeatCount="indefinite"/>
-          <animate attributeName="opacity" values="1;.3;1" dur="2.4s" repeatCount="indefinite"/>
-        </circle>
-        <line x1="60" y1="90"  x2="340" y2="90"  stroke="rgba(255,140,0,.2)" stroke-width="1" stroke-dasharray="6,6"/>
-        <line x1="60" y1="110" x2="340" y2="110" stroke="rgba(255,0,200,.2)" stroke-width="1" stroke-dasharray="4,8"/>
-      </svg>
-
-      <!-- Floating icons overlay -->
-      <div class="float-icons">
-        <span class="fi fi-1">&#10067;</span>
-        <span class="fi fi-2">&#128205;</span>
-        <span class="fi fi-3">&#10067;</span>
-        <span class="fi fi-4">&#128173;</span>
-        <span class="fi fi-5">&#128302;</span>
-      </div>
-
-    </div><!-- /mind-visual -->
-
-    <div class="hero-sub" style="
-      background: linear-gradient(160deg, rgba(60,0,120,.32), rgba(100,0,80,.22));
-      border: 1.5px solid rgba(200,100,255,.38);
-      border-radius: 18px;
-      padding: 0;
-      margin: 12px 0 4px;
-      overflow: hidden;
-    ">
-      <!-- Rainbow top line -->
-      <div style="height:3px;background:linear-gradient(90deg,#7b00ff,#ff4dac,#ffd700,#ff4dac,#7b00ff);"></div>
-
-      <!-- ===== HINDI BLOCK ===== -->
-      <div style="padding:16px 16px 14px;">
-        <div style="font-size:10px;font-weight:800;letter-spacing:2.5px;
-          color:rgba(255,215,0,.75);font-family:'Poppins',sans-serif;
-          margin-bottom:10px;">
-          &#127470;&#127475; &nbsp;HINDI &nbsp;| &nbsp;हिंदी
-        </div>
-
-        <!-- Hindi power statement -->
-        <div style="
-          background: rgba(255,215,0,.08);
-          border-left: 4px solid var(--gold);
-          border-radius: 0 12px 12px 0;
-          padding: 12px 14px;
-          margin-bottom: 14px;
-          font-family: 'Noto Sans Devanagari', sans-serif;
-        ">
-          <div style="font-size:16px;font-weight:900;color:#fff;line-height:1.7;margin-bottom:8px;">
-            🧠 किसी व्यक्ति का सिर्फ
-            <span style="color:var(--gold);">चेहरा देखकर</span>
-            आप यह बता सकते हैं कि
-            <span style="color:var(--gold);">'उसके मन में क्या चल रहा है'</span> —
-          </div>
-          <div style="font-size:14px;font-weight:700;color:rgba(255,240,200,.9);line-height:1.7;margin-bottom:8px;">
-            वो कुछ भी सोच रहा हो — चाहे <strong style="color:#fff">किसी का नाम</strong>,
-            कोई <strong style="color:#fff">जगह</strong>, कोई <strong style="color:#fff">नंबर</strong>
-            या कोई और बात —
-            आप <strong style="color:#fff">बस उसका जहरा देख के</strong> सब बता सकते हैं!
-          </div>
-          <div style="
-            background: rgba(255,100,0,.15);
-            border: 1px solid rgba(255,140,0,.3);
-            border-radius: 8px;
-            padding: 8px 10px;
-            font-size:12px;font-weight:800;
-            color:rgba(255,200,100,.95);line-height:1.6;
-          ">
-            🌟 इसी Secret Technique का इस्तेमाल करते हैं दुनिया के बड़े Mind Readers —<br/>
-            <strong style="color:#fff;font-size:13px;">👑 Suhani Shah &nbsp;&bull;&nbsp; Dhirendra Shastri &nbsp;&bull;&nbsp; Lior Suchard </strong><br/>
-            <span style="color:rgba(255,215,0,.7);font-size:11px;">...aur hazaron aur log duniya bhar mein!</span>
-          </div>
-        </div>
-
-        <div style="font-size:16px;font-weight:900;
-          color:var(--gold);font-family:'Noto Sans Devanagari',sans-serif;
-          line-height:1.6;margin-bottom:14px;">
-          वह क्या सोच रहा है &mdash; नाम, जगह या कोई बात
-          <span style="font-size:20px;color:#fff;"> ❓❓❓</span>
-        </div>
-
-        <!-- Hindi trust pills -->
-        <div style="display:flex;flex-wrap:wrap;gap:7px;">
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Noto Sans Devanagari',sans-serif;">😊 नाम</span>
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Noto Sans Devanagari',sans-serif;">📍 जगह</span>
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Noto Sans Devanagari',sans-serif;">💭 मन की बात</span>
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Noto Sans Devanagari',sans-serif;">🔢 लकी नंबर</span>
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Noto Sans Devanagari',sans-serif;">💼 काम/नौकरी</span>
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Noto Sans Devanagari',sans-serif;">❤️ रिश्ता</span>
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Noto Sans Devanagari',sans-serif;">😟 चिंता/डर</span>
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Noto Sans Devanagari',sans-serif;">🌟 भविष्य की सोच</span>
-          <span style="background:rgba(255,215,0,.18);border:1.5px solid rgba(255,215,0,.5);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:var(--gold);font-family:'Noto Sans Devanagari',sans-serif;">✨ और भी बहुत कुछ...</span>
-        </div>
-      </div>
-
-      <!-- Divider -->
-      <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);margin:0 16px;"></div>
-
-      <!-- ===== ENGLISH BLOCK ===== -->
-      <div style="padding:14px 16px 16px;">
-        <div style="font-size:10px;font-weight:800;letter-spacing:2.5px;
-          color:rgba(160,216,255,.75);font-family:'Poppins',sans-serif;
-          margin-bottom:10px;">
-          &#127468;&#127463; &nbsp;ENGLISH
-        </div>
-
-        <!-- English power statement -->
-        <div style="
-          background: rgba(160,216,255,.08);
-          border-left: 4px solid #a0d8ff;
-          border-radius: 0 12px 12px 0;
-          padding: 12px 14px;
-          margin-bottom: 14px;
-          font-family: 'Poppins', sans-serif;
-        ">
-          <div style="font-size:16px;font-weight:900;color:#fff;line-height:1.7;margin-bottom:8px;">
-            🧠 Just by looking at someone&apos;s
-            <span style="color:var(--gold);">face</span>,
-            you can reveal <span style="color:var(--gold);">&apos;what is going on in their mind&apos;</span> &mdash;
-          </div>
-          <div style="font-size:14px;font-weight:700;color:rgba(210,230,255,.9);line-height:1.7;margin-bottom:8px;">
-            Whatever they&apos;re thinking &mdash; whether it&apos;s
-            <strong style="color:#fff">someone&apos;s Name</strong>,
-            a <strong style="color:#fff">Place</strong>,
-            a <strong style="color:#fff">Number</strong>,
-            or absolutely anything &mdash;
-            <strong style="color:#fff">just look at their face</strong> and you can tell it all!
-          </div>
-          <div style="
-            background: rgba(255,100,0,.15);
-            border: 1px solid rgba(255,140,0,.3);
-            border-radius: 8px;
-            padding: 8px 10px;
-            font-size:12px;font-weight:800;
-            color:rgba(255,200,100,.95);line-height:1.6;
-          ">
-            🌟 This is the SAME Secret Technique used by world-famous Mind Readers &mdash;<br/>
-            <strong style="color:#fff;font-size:13px;">👑 Suhani Shah &nbsp;&bull;&nbsp; Dhirendra Shastri &nbsp;&bull;&nbsp; Lior Suchard</strong><br/>
-            <span style="color:rgba(255,215,0,.7);font-size:11px;">...and thousands of mind readers worldwide!</span>
-          </div>
-        </div>
-
-        <div style="font-size:15px;font-weight:900;
-          font-family:'Poppins',sans-serif;line-height:1.65;margin-bottom:14px;
-          color:var(--gold);">
-          What are they thinking &mdash; A Name, A Place, or Any Secret?
-          <span style="font-size:20px;color:#fff;"> ❓❓❓</span>
-        </div>
-
-        <!-- English trust pills -->
-        <div style="display:flex;flex-wrap:wrap;gap:7px;">
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Poppins',sans-serif;">😊 Name</span>
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Poppins',sans-serif;">📍 Place</span>
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Poppins',sans-serif;">💭 Secret Thought</span>
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Poppins',sans-serif;">🔢 Lucky Number</span>
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Poppins',sans-serif;">💼 Job / Career</span>
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Poppins',sans-serif;">❤️ Relationship</span>
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Poppins',sans-serif;">😟 Hidden Fear</span>
-          <span style="background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:#fff;font-family:'Poppins',sans-serif;">🌟 Future Plans</span>
-          <span style="background:rgba(255,215,0,.18);border:1.5px solid rgba(255,215,0,.5);
-            border-radius:30px;padding:5px 12px;font-size:12px;font-weight:800;
-            color:var(--gold);font-family:'Noto Sans Devanagari',sans-serif;">✨ & Much More...</span>
-        </div>
-      </div>
+    <!-- Day Labels -->
+    <div class="cal-grid" id="calGrid">
+      <div class="cal-day-label">Su</div>
+      <div class="cal-day-label">Mo</div>
+      <div class="cal-day-label">Tu</div>
+      <div class="cal-day-label">We</div>
+      <div class="cal-day-label">Th</div>
+      <div class="cal-day-label">Fr</div>
+      <div class="cal-day-label">Sa</div>
     </div>
 
+    <!-- Legend -->
+    <div class="cal-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div>Available</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#ff6b6b"></div>Full</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--purple-light)"></div>Selected</div>
+    </div>
+  </div>
 
-    <!-- Training Language Badge -->
-    <div style="
-      display:flex;align-items:center;justify-content:center;gap:10px;
-      background:linear-gradient(135deg,rgba(0,100,50,.3),rgba(0,60,30,.4));
-      border:1.5px solid rgba(0,220,100,.3);
-      border-radius:30px;padding:9px 18px;
-      margin:10px 16px 4px;
-      font-family:'Poppins',sans-serif;
-    ">
-      <span style="font-size:18px;">🌐</span>
-      <div style="text-align:left;">
-        <span style="display:block;font-size:12px;font-weight:800;color:#00e676;">Training Available In:</span>
-        <span style="display:block;font-size:13px;font-weight:900;color:#fff;">
-          🇮🇳 <span style="color:var(--gold)">Hindi</span> &nbsp;&amp;&nbsp; 🇬🇧 <span style="color:#a0d8ff">English</span>
-          <span style="font-size:10px;font-weight:600;color:rgba(255,255,255,.55);margin-left:4px;">(Both Languages)</span>
-        </span>
+  <!-- TIME SLOT SECTION -->
+  <div class="card" id="timeSection" style="opacity:.4; pointer-events:none; filter:grayscale(.5)">
+    <div class="card-title">⏰ Time Slot चुनें</div>
+    <div class="slots-grid" id="slotsGrid">
+      <!-- Slots will be generated by JS -->
+    </div>
+  </div>
+
+  <!-- USER DETAILS FORM -->
+  <div class="card" id="formSection" style="opacity:.4; pointer-events:none; filter:grayscale(.5)">
+    <div class="card-title">👤 आपकी Details</div>
+
+    <div class="form-group">
+      <label class="form-label" for="uName">📛 पूरा नाम</label>
+      <input type="text" id="uName" class="form-input" placeholder="जैसे: Rahul Sharma"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="uPhone">📱 Mobile Number</label>
+      <input type="tel" id="uPhone" class="form-input" placeholder="10 अंकों का नंबर"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="uEmail">📧 Email (Optional)</label>
+      <input type="email" id="uEmail" class="form-input" placeholder="yourname@email.com"/>
+    </div>
+
+    <!-- Summary -->
+    <div class="summary-box">
+      <div class="summary-title">📋 Booking Summary</div>
+      <div class="summary-row">
+        <span class="summary-key">Course</span>
+        <span class="summary-val">Mind Reading Secret</span>
       </div>
-      <span style="font-size:16px;">✅</span>
-    </div>
-
-
-
-    <!-- Secret Trick Banner -->
-    <div class="trick-banner">
-      🔥 <span class="gold">यह Secret Trick</span> आपको कोई सिखाने वाला नहीं!<br/>
-      <span style="font-size:11px;font-weight:600;opacity:.8;font-family:'Poppins',sans-serif">Nobody else will teach you this Secret Trick!</span>
-    </div>
-
-    <!-- Duration Pill -->
-    <div class="duration-pill">
-      <span class="dur-clock">⏰</span>
-      Training Duration:&nbsp;<span class="dur-num">1 Hour</span>
-    </div>
-  </section>
-
-  <!-- SEAT SCARCITY URGENCY BLOCK -->
-  <div style="
-    margin: 0 12px 4px;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 2px solid rgba(255,80,80,.45);
-    background: linear-gradient(135deg, rgba(120,0,0,.35), rgba(60,0,0,.45));
-    position: relative;
-  ">
-    <!-- Top red pulse bar -->
-    <div style="height:4px;background:linear-gradient(90deg,#ff2200,#ff6600,#ffcc00,#ff6600,#ff2200);
-      animation: shimmer 2s linear infinite;background-size:200% auto;"></div>
-
-    <!-- LIVE badge + title -->
-    <div style="display:flex;align-items:center;gap:10px;padding:12px 14px 6px;">
-      <span style="
-        background:#ff2200;color:#fff;font-size:9px;font-weight:900;
-        padding:3px 8px;border-radius:20px;letter-spacing:1.5px;
-        font-family:'Poppins',sans-serif;
-        animation:pulse-red 1s ease-in-out infinite alternate;
-      ">⚡ LIVE</span>
-      <div>
-        <div style="font-size:13px;font-weight:900;color:#fff;font-family:'Noto Sans Devanagari',sans-serif;">
-          ⚠️ सीटें तेज़ी से भर रही हैं!
-        </div>
-        <div style="font-size:11px;font-weight:700;color:rgba(255,180,100,.85);font-family:'Poppins',sans-serif;">
-          Seats are filling up fast!
-        </div>
+      <div class="summary-row">
+        <span class="summary-key">Date</span>
+        <span class="summary-val gold" id="sumDate">— चुनें</span>
       </div>
-    </div>
-
-    <!-- Slot count -->
-    <div style="text-align:center;padding:8px 14px 4px;">
-      <div style="
-        display:inline-flex;align-items:center;gap:10px;
-        background:rgba(255,255,255,.06);
-        border:1.5px solid rgba(255,100,100,.3);
-        border-radius:50px;padding:10px 22px;
-      ">
-        <span style="font-size:36px;font-weight:900;color:#ff4444;
-          font-family:'Poppins',sans-serif;line-height:1;
-          text-shadow:0 0 20px rgba(255,50,50,.6);"
-          id="seatCount">29</span>
-        <div style="text-align:left;">
-          <div style="font-size:12px;font-weight:900;color:#fff;font-family:'Noto Sans Devanagari',sans-serif;">
-            Slots बचे हैं
-          </div>
-          <div style="font-size:11px;font-weight:700;color:rgba(255,200,100,.8);font-family:'Poppins',sans-serif;">
-            Slots Remaining
-          </div>
-        </div>
-        <span style="font-size:24px;">🔥</span>
+      <div class="summary-row">
+        <span class="summary-key">Time</span>
+        <span class="summary-val gold" id="sumTime">— चुनें</span>
       </div>
-    </div>
-
-    <!-- Progress bar: seats taken -->
-    <div style="padding:10px 14px 6px;">
-      <div style="display:flex;justify-content:space-between;margin-bottom:5px;">
-        <span style="font-size:10px;font-weight:700;color:rgba(255,180,100,.85);font-family:'Poppins',sans-serif;">
-          71 seats booked
-        </span>
-        <span style="font-size:10px;font-weight:700;color:#ff4444;font-family:'Poppins',sans-serif;">
-          29 left / 100 total
-        </span>
+      <div class="summary-row">
+        <span class="summary-key">Amount Paid</span>
+        <span class="summary-val" style="color:var(--green)">₹499 ✅</span>
       </div>
-      <!-- Bar background -->
-      <div style="height:10px;background:rgba(255,255,255,.1);border-radius:10px;overflow:hidden;">
-        <!-- Filled portion -->
-        <div style="
-          height:100%;width:71%;
-          background:linear-gradient(90deg,#ff2200,#ff6600,#ffcc00);
-          border-radius:10px;
-          position:relative;overflow:hidden;
-        ">
-          <!-- Shine sweep -->
-          <div style="
-            position:absolute;top:0;left:-60%;width:40%;height:100%;
-            background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);
-            animation:sweep 2s ease-in-out infinite;
-          "></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Warning line -->
-    <div style="
-      margin:8px 14px 12px;
-      background:rgba(255,200,0,.1);
-      border:1px solid rgba(255,200,0,.25);
-      border-radius:10px;
-      padding:8px 12px;
-      display:flex;align-items:flex-start;gap:8px;
-    ">
-      <span style="font-size:16px;margin-top:1px;">⚠️</span>
-      <div>
-        <div style="font-size:12px;font-weight:800;color:#ffdd00;font-family:'Noto Sans Devanagari',sans-serif;line-height:1.5;">
-          अभी Book नहीं किया तो Slot चला जाएगा!
-        </div>
-        <div style="font-size:11px;font-weight:600;color:rgba(255,220,120,.8);font-family:'Poppins',sans-serif;margin-top:2px;">
-          Don't miss your slot — once it's gone, it's gone!
-        </div>
+      <div class="summary-row">
+        <span class="summary-key">Mode</span>
+        <span class="summary-val">Online Training</span>
       </div>
     </div>
   </div>
 
-  <style>
-    @keyframes pulse-red {
-      from { box-shadow: 0 0 6px rgba(255,0,0,.5); }
-      to   { box-shadow: 0 0 16px rgba(255,0,0,.9); }
-    }
-    @keyframes sweep {
-      0%   { left: -60%; }
-      100% { left: 160%; }
-    }
-  </style>
-
-  <script>
-    /* ── SLOT COUNT — reads from Admin Panel via localStorage ── */
-    (function(){
-      var STORAGE_KEY = 'mr_slots';
-      var el = document.getElementById('seatCount');
-      if(!el) return;
-
-      /* Load admin-set value, fallback to 29 */
-      var saved = localStorage.getItem(STORAGE_KEY);
-      var count = (saved !== null) ? parseInt(saved) : 29;
-      el.textContent = count;
-
-      /* Auto-decrease (respects admin toggle) */
-      var autoDecr = localStorage.getItem('mr_auto_decr');
-      if(autoDecr !== '0'){          /* default ON unless admin turned off */
-        setInterval(function(){
-          if(count > 10){
-            count--;
-            el.textContent = count;
-            /* Save back so sticky bar stays in sync */
-            localStorage.setItem(STORAGE_KEY, count);
-          }
-        }, 45000);                   /* every 45 seconds */
-      }
-    })();
-  </script>
-
-
-
-  <!-- FEATURE CARDS -->
-  <div class="features">
-    <div class="feat-card">
-      <span class="feat-ico">🏆</span>
-      <span class="feat-check">✅ लोगों को</span>
-      <div class="feat-title"><b>Surprise</b> करें<span class="en">Amaze Everyone</span></div>
-    </div>
-    <div class="feat-card">
-      <span class="feat-ico">❤️</span>
-      <span class="feat-check">✅ Social</span>
-      <div class="feat-title">Gathering में <b>Star</b> बनें<span class="en">Be the Star</span></div>
-    </div>
-    <div class="feat-card">
-      <span class="feat-ico">🧠</span>
-      <span class="feat-check">✅ Mind Reading</span>
-      <div class="feat-title"><b>Expert</b> बनें<span class="en">Become Expert</span></div>
-    </div>
-  </div>
-
-
-  <!-- GUARANTEE -->
-  <div class="guarantee">
-    <span class="g-lock">🔒</span>
-    <div class="g-text"><span>100% Secure</span> Payment | अभी रजिस्टर करें <span style="font-size:.85em;opacity:.7;font-family:'Poppins',sans-serif">(Register Now)</span> और <span>Instant Access</span> पाएं <span style="font-size:.85em;opacity:.7;font-family:'Poppins',sans-serif">(Get Instant Access)</span></div>
-    <div class="g-chips">
-      <div class="g-chip">UPI</div>
-      <div class="g-chip">💳</div>
-      <div class="g-chip">📱</div>
-      <div class="g-chip">▶</div>
-    </div>
-  </div>
-
-  <!-- CTA BUTTON -->
-  <div class="cta-wrap">
-    <button class="cta-btn" id="mainCta" onclick="checkLoginAndProceed()">
-      <span class="cta-rocket">🚀</span>
-      <span class="cta-texts">
-        <span class="cta-main">अभी क्लिक करें — Start Now!</span>
-        <span class="cta-sub">सीखने के लिए / Click to Start Learning</span>
-      </span>
+  <!-- CONFIRM BUTTON -->
+  <div class="confirm-wrap">
+    <button class="confirm-btn" id="confirmBtn" disabled onclick="confirmBooking()">
+      🎯 Slot Confirm करें
     </button>
   </div>
 
-  <!-- TESTIMONIALS -->
-  <div class="testi">
-    <div class="sec-title">⭐ हमारे Students की बातें<span class="en" style="font-size:.6em;color:rgba(255,215,0,.5)">What Our Students Say</span></div>
-    <div class="t-card">
-      <div class="t-top">
-        <div class="t-av">👦</div>
-        <div><div class="t-name">Rahul Sharma – Delhi</div><div class="t-stars">★★★★★</div></div>
-      </div>
-      <div class="t-msg">"1 घंटे में इतना कुछ सीखना संभव है — यकीन नहीं था। पार्टी में सबको हैरान कर दिया! 🔥"<span class="en" style="color:#b090e0;margin-top:5px">"I didn't believe you could learn so much in 1 hour — amazed everyone at the party!"</span></div>
-    </div>
-    <div class="t-card">
-      <div class="t-top">
-        <div class="t-av">👧</div>
-        <div><div class="t-name">Priya Verma – Mumbai</div><div class="t-stars">★★★★★</div></div>
-      </div>
-      <div class="t-msg">"बहुत कमाल की technique! मेरे दोस्त अब मुझे mind reader बुलाते हैं 😄 पैसा वसूल!"<span class="en" style="color:#b090e0;margin-top:5px">"Amazing technique! My friends now call me a mind reader 😄 Totally worth the money!"</span></div>
-    </div>
-    <div class="t-card">
-      <div class="t-top">
-        <div class="t-av">👨</div>
-        <div><div class="t-name">Amit Patel – Ahmedabad</div><div class="t-stars">★★★★★</div></div>
-      </div>
-      <div class="t-msg">"₹199 में इतना value! Office में boss को भी impress किया। Highly recommended! 👍"<span class="en" style="color:#b090e0;margin-top:5px">"So much value for ₹199! Even impressed my office boss. Highly recommended! 👍"</span></div>
-    </div>
-  </div>
+</div><!-- /page -->
 
-  <!-- FINAL CTA -->
-  <div class="cta-wrap">
-    <button class="cta-btn" onclick="checkLoginAndProceed()">
-      <span class="cta-rocket">🚀</span>
-      <span class="cta-texts">
-        <span class="cta-main">अभी क्लिक करें — Start Now!</span>
-        <span class="cta-sub">सीखने के लिए / Click to Start Learning</span>
-      </span>
-    </button>
-  </div>
-
-  <!-- PRICING — Sabse neeche -->
-  <div class="pricing">
-    <div class="price-card">
-      <div class="price-old">₹1999 <span style="font-size:.8em;font-family:'Poppins',sans-serif">(Not Today)</span></div>
-      <div class="price-new"><sup>₹</sup>499</div>
-      <div class="price-tag">🎯 सिर्फ आज / <em>Only Today</em> — <strong>₹499</strong> में — जल्दी करें! <span style="font-size:.85em;opacity:.8">(Hurry Up!)</span></div>
-      <div class="pay-badges">
-        <div class="pbadge"><span class="ck">✅</span> Safe Payment</div>
-        <div class="pbadge"><span class="ck">✅</span> Instant Access</div>
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal-box">
+    <div class="confetti">
+      <span>🎉</span><span>⭐</span><span>🧠</span><span>🎊</span><span>✨</span>
+    </div>
+    <span class="modal-icon">🎉</span>
+    <div class="modal-title">Slot Booked! बधाई हो!</div>
+    <div class="modal-sub">आपका Mind Reading Training slot confirm हो गया है। Details WhatsApp/Email पर भेज दी जाएंगी।</div>
+    <div class="modal-detail">
+      <div class="modal-detail-row">
+        <span class="modal-detail-key">नाम</span>
+        <span class="modal-detail-val" id="modalName">—</span>
       </div>
-      <div class="pay-row">
-        <div class="pay-chip upi">UPI</div>
-        <div class="pay-chip gpay">G Pay</div>
-        <div class="pay-chip paytm">Paytm</div>
-        <div class="pay-chip">💳 Card</div>
+      <div class="modal-detail-row">
+        <span class="modal-detail-key">Date</span>
+        <span class="modal-detail-val" id="modalDate">—</span>
+      </div>
+      <div class="modal-detail-row">
+        <span class="modal-detail-key">Time</span>
+        <span class="modal-detail-val" id="modalTime">—</span>
+      </div>
+      <div class="modal-detail-row">
+        <span class="modal-detail-key">Course</span>
+        <span class="modal-detail-val">Mind Reading Secret 🧠</span>
       </div>
     </div>
-  </div>
-
-
-
-<!-- ============================
-     STICKY BOTTOM CTA BAR
-============================= -->
-<div id="stickyBar" style="
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  z-index: 9999;
-  background: linear-gradient(135deg, #1a0035, #2d0060);
-  border-top: 2px solid rgba(255,215,0,.4);
-  padding: 10px 14px 12px;
-  box-shadow: 0 -4px 30px rgba(80,0,180,.5);
-  transform: translateY(100%);
-  transition: transform .35s cubic-bezier(.4,0,.2,1);
-">
-  <div style="position:absolute;top:0;left:0;right:0;height:2px;
-    background:linear-gradient(90deg,#7b00ff,#ffd700,#ff4dac,#ffd700,#7b00ff);"></div>
-
-  <div style="display:flex;align-items:center;gap:10px;">
-
-    <!-- Price block -->
-    <div style="flex-shrink:0;text-align:center;">
-      <div style="font-size:9px;font-weight:700;color:rgba(255,215,0,.7);
-        font-family:'Poppins',sans-serif;text-decoration:line-through;">&#8377;1999</div>
-      <div style="font-size:22px;font-weight:900;color:#ffd700;
-        font-family:'Poppins',sans-serif;line-height:1;">&#8377;499</div>
-      <div style="font-size:8px;font-weight:700;color:#00e676;
-        font-family:'Poppins',sans-serif;">Only Today</div>
-    </div>
-
-    <!-- Divider -->
-    <div style="width:1px;height:44px;background:rgba(255,255,255,.15);flex-shrink:0;"></div>
-
-    <!-- Urgency text -->
-    <div style="flex:1;min-width:0;">
-      <div style="font-size:11px;font-weight:900;color:#fff;
-        font-family:'Noto Sans Devanagari',sans-serif;line-height:1.5;">
-        &#128293; <span id="stickySeats">29</span> Slots &#2348;&#2330;&#2375; &#2361;&#2376;&#2306;!
-      </div>
-      <div style="font-size:10px;font-weight:600;color:rgba(255,180,100,.85);
-        font-family:'Poppins',sans-serif;margin-top:1px;">
-        &#9889; Only <span id="stickySeats2">29</span> slots left &#8212; grab yours now!
-      </div>
-    </div>
-
-    <!-- CTA Button -->
-    <button onclick="checkLoginAndProceed()"
-       id="stickyBtn"
-       style="
-         flex-shrink:0;
-         display:flex;flex-direction:column;align-items:center;justify-content:center;
-         background: linear-gradient(135deg,#ffd700,#ff8c00);
-         color: #1a0035;
-         font-weight:900;
-         border-radius:12px;
-         padding:9px 16px;
-         border:none;
-         cursor:pointer;
-         font-family:'Poppins',sans-serif;
-         box-shadow:0 4px 18px rgba(255,180,0,.5);
-       ">
-      <span style="font-size:15px;line-height:1;">&#128640; Learn Now</span>
-      <span style="font-size:9px;font-weight:600;opacity:.85;margin-top:2px;">&#2309;&#2349;&#2368; &#2358;&#2369;&#2352;&#2370; &#2325;&#2352;&#2375;&#2306;</span>
-    </button>
-
-    <!-- Profile Button -->
-    <button onclick="openProfileModal()"
-       id="profileBtn"
-       style="
-         flex-shrink:0;
-         display:flex;flex-direction:column;align-items:center;justify-content:center;
-         background: linear-gradient(135deg,#a020f0,#6600cc);
-         color: #fff;
-         font-weight:900;
-         border-radius:12px;
-         padding:10px 18px;
-         border:2px solid rgba(200,100,255,.6);
-         cursor:pointer;
-         font-family:'Poppins',sans-serif;
-         box-shadow:0 4px 20px rgba(160,32,240,.65);
-         min-width:64px;
-       ">
-      <span style="font-size:24px;line-height:1;">&#128100;</span>
-      <span style="font-size:11px;font-weight:800;letter-spacing:.3px;margin-top:3px;">Profile</span>
-    </button>
-
-  </div>
-</div>
-
-<style>
-  #stickyBtn { animation: stk-pulse 2s ease-in-out infinite; }
-  @keyframes stk-pulse {
-    0%,100% { box-shadow: 0 4px 16px rgba(255,180,0,.45); }
-    50%      { box-shadow: 0 4px 28px rgba(255,180,0,.9); }
-  }
-  #profileBtn { animation: prof-pulse 2.5s ease-in-out infinite; }
-  @keyframes prof-pulse {
-    0%,100% { box-shadow: 0 4px 14px rgba(123,0,255,.4); }
-    50%      { box-shadow: 0 4px 24px rgba(123,0,255,.8); }
-  }
-  body { padding-bottom: 76px; }
-
-  /* ========= PROFILE MODAL ========= */
-  #profileOverlay {
-    display:none; position:fixed; inset:0; z-index:999998;
-    background:rgba(0,0,0,.85); backdrop-filter:blur(12px);
-    align-items:center; justify-content:center; padding:16px;
-  }
-  #profileOverlay.open { display:flex; }
-  #profileBox {
-    background:linear-gradient(160deg,#160035,#0a0018,#1a0040);
-    border:1.5px solid rgba(123,0,255,.5);
-    border-radius:24px; width:100%; max-width:360px;
-    padding:32px 24px 28px;
-    position:relative;
-    animation: reg-pop .35s cubic-bezier(.32,.72,0,1);
-    box-shadow: 0 24px 80px rgba(100,0,255,.45);
-  }
-  .prof-close {
-    position:absolute; top:14px; right:14px;
-    background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12);
-    color:#fff; border-radius:50%; width:32px; height:32px;
-    font-size:16px; cursor:pointer; display:flex; align-items:center; justify-content:center;
-  }
-  .prof-avatar {
-    width:70px; height:70px; border-radius:50%;
-    background:linear-gradient(135deg,#7b00ff,#ff4dac);
-    display:flex; align-items:center; justify-content:center;
-    font-size:32px; margin:0 auto 14px;
-    box-shadow:0 0 30px rgba(123,0,255,.5);
-  }
-  .prof-name {
-    text-align:center; font-size:20px; font-weight:900;
-    background:linear-gradient(90deg,#ffd700,#ff4dac);
-    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-    margin-bottom:4px;
-  }
-  .prof-tag {
-    text-align:center; font-size:11px; color:rgba(255,255,255,.4);
-    font-family:'Poppins',sans-serif; margin-bottom:22px;
-  }
-  .prof-info-row {
-    display:flex; align-items:center; gap:12px;
-    background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
-    border-radius:12px; padding:13px 16px; margin-bottom:10px;
-  }
-  .prof-info-icon { font-size:20px; flex-shrink:0; }
-  .prof-info-lbl { font-size:9px; color:rgba(255,215,0,.6); font-weight:700; letter-spacing:.4px; font-family:'Poppins',sans-serif; }
-  .prof-info-val { font-size:14px; font-weight:800; color:#fff; font-family:'Poppins',sans-serif; margin-top:2px; }
-  .prof-logout-btn {
-    width:100%; padding:13px; border-radius:12px; border:none; cursor:pointer; margin-top:14px;
-    background:rgba(255,50,50,.15); border:1.5px solid rgba(255,80,80,.3);
-    color:#ff8888; font-size:14px; font-weight:700; font-family:'Poppins',sans-serif;
-    transition:.2s;
-  }
-  .prof-logout-btn:hover { background:rgba(255,50,50,.3); color:#fff; }
-  /* No-user state */
-  .prof-nouser { text-align:center; }
-  .prof-nouser-icon { font-size:50px; margin-bottom:12px; }
-  .prof-nouser-text { font-size:14px; color:rgba(255,255,255,.5); font-family:'Poppins',sans-serif; margin-bottom:18px; }
-  .prof-reg-btn {
-    width:100%; padding:13px; border-radius:12px; border:none; cursor:pointer;
-    background:linear-gradient(135deg,#7b00ff,#b060ff);
-    color:#fff; font-size:14px; font-weight:900; font-family:'Poppins',sans-serif;
-  }
-
-  /* ========= REGISTRATION MODAL ========= */
-  #regOverlay {
-    display:none; position:fixed; inset:0; z-index:999999;
-    background:rgba(0,0,0,.85); backdrop-filter:blur(12px);
-    align-items:center; justify-content:center; padding:16px;
-  }
-  #regOverlay.open { display:flex; }
-  #regBox {
-    background:linear-gradient(160deg,#160035,#0a0018,#1a0040);
-    border:1.5px solid rgba(123,0,255,.5);
-    border-radius:24px; width:100%; max-width:380px;
-    padding:32px 24px 28px;
-    position:relative;
-    animation: reg-pop .35s cubic-bezier(.32,.72,0,1);
-    box-shadow: 0 24px 80px rgba(100,0,255,.45);
-  }
-  @keyframes reg-pop {
-    from { transform:scale(.85) translateY(30px); opacity:0; }
-    to   { transform:scale(1) translateY(0); opacity:1; }
-  }
-  #regBox .reg-close {
-    position:absolute; top:14px; right:14px;
-    background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12);
-    color:#fff; border-radius:50%; width:32px; height:32px;
-    font-size:16px; cursor:pointer; display:flex; align-items:center; justify-content:center;
-    transition:.2s;
-  }
-  #regBox .reg-close:hover { background:rgba(255,50,50,.3); }
-  .reg-title {
-    text-align:center; font-size:22px; font-weight:900;
-    background:linear-gradient(90deg,#ffd700,#ff4dac,#b060ff);
-    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-    margin-bottom:4px;
-  }
-  .reg-subtitle {
-    text-align:center; font-size:11px; color:rgba(255,255,255,.45);
-    margin-bottom:22px; font-family:'Poppins',sans-serif;
-  }
-  .reg-field { margin-bottom:14px; }
-  .reg-label {
-    font-size:10px; font-weight:700; color:rgba(255,215,0,.7);
-    letter-spacing:.5px; margin-bottom:6px; font-family:'Poppins',sans-serif;
-  }
-  .reg-input {
-    width:100%; padding:12px 14px; border-radius:12px;
-    background:rgba(255,255,255,.06); border:1.5px solid rgba(255,255,255,.12);
-    color:#fff; font-size:15px; font-family:'Poppins',sans-serif;
-    outline:none; transition:.2s; box-sizing:border-box;
-  }
-  .reg-input:focus { border-color:rgba(123,0,255,.7); background:rgba(123,0,255,.08); }
-  .reg-input.error { border-color:#ff4444; background:rgba(255,50,50,.07); }
-  .reg-err {
-    font-size:10px; color:#ff6666; font-weight:600;
-    margin-top:5px; display:none; font-family:'Poppins',sans-serif;
-  }
-  .reg-err.show { display:block; }
-  .reg-btn {
-    width:100%; padding:15px; border-radius:14px; border:none; cursor:pointer;
-    background:linear-gradient(135deg,#b80000,#e61000,#ff3300,#ff6600);
-    color:#fff; font-size:16px; font-weight:900;
-    font-family:'Noto Sans Devanagari',sans-serif;
-    margin-top:6px;
-    box-shadow:0 6px 22px rgba(255,50,0,.45);
-    transition:.2s; position:relative; overflow:hidden;
-  }
-  .reg-btn:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(255,50,0,.6); }
-  .reg-btn:active { transform:scale(.97); }
-
-  /* Success state */
-  #regSuccess {
-    display:none; text-align:center; padding:10px 0 0;
-  }
-  #regSuccess .suc-icon {
-    font-size:72px;
-    animation: suc-bounce .5s cubic-bezier(.36,.07,.19,.97) both;
-  }
-  @keyframes suc-bounce {
-    0%  { transform:scale(0) rotate(-20deg); opacity:0; }
-    60% { transform:scale(1.25) rotate(5deg); opacity:1; }
-    80% { transform:scale(.9); }
-    100%{ transform:scale(1); }
-  }
-  #regSuccess .suc-title {
-    font-size:20px; font-weight:900; color:#00e676;
-    font-family:'Poppins',sans-serif; margin:12px 0 4px;
-  }
-  #regSuccess .suc-sub {
-    font-size:12px; color:rgba(255,255,255,.5);
-    font-family:'Poppins',sans-serif;
-  }
-  #regSuccess .suc-loader {
-    margin:18px auto 0;
-    width:40px; height:40px;
-    border:4px solid rgba(255,255,255,.1);
-    border-top-color:#ffd700;
-    border-radius:50%;
-    animation:spin .8s linear infinite;
-  }
-  @keyframes spin { to { transform:rotate(360deg); } }
-</style>
-
-<!-- ============================
-     PROFILE MODAL
-============================= -->
-<div id="profileOverlay">
-  <div id="profileBox">
-    <button class="prof-close" onclick="closeProfileModal()">✕</button>
-
-    <!-- Logged In View -->
-    <div id="profLoggedIn" style="display:none;">
-      <div class="prof-avatar">👤</div>
-      <div class="prof-name">My Profile</div>
-      <div class="prof-tag">Mind Reading Secret — Student</div>
-
-      <div class="prof-info-row">
-        <span class="prof-info-icon">📱</span>
-        <div>
-          <div class="prof-info-lbl">MOBILE NUMBER</div>
-          <div class="prof-info-val" id="profMobileDisplay">—</div>
-        </div>
-      </div>
-
-      <div class="prof-info-row">
-        <span class="prof-info-icon">🎓</span>
-        <div>
-          <div class="prof-info-lbl">COURSE</div>
-          <div class="prof-info-val">Mind Reading Secret 🧠</div>
-        </div>
-      </div>
-
-      <div class="prof-info-row">
-        <span class="prof-info-icon">📅</span>
-        <div>
-          <div class="prof-info-lbl">JOINED ON</div>
-          <div class="prof-info-val" id="profJoinDisplay">—</div>
-        </div>
-      </div>
-
-      <div class="prof-info-row" style="border-color:rgba(0,230,118,.2);background:rgba(0,230,118,.05);">
-        <span class="prof-info-icon">✅</span>
-        <div>
-          <div class="prof-info-lbl">STATUS</div>
-          <div class="prof-info-val" style="color:#00e676;">Registered</div>
-        </div>
-      </div>
-
-      <button class="prof-logout-btn" onclick="profLogout()">🚪 Logout / Clear Profile</button>
-    </div>
-
-    <!-- Not Logged In View -->
-    <div id="profNoUser">
-      <div class="prof-nouser" id="profNoUserMain">
-        <div class="prof-nouser-icon">🔐</div>
-        <div class="prof-name" style="margin-bottom:8px;">No Profile Found</div>
-        <div class="prof-nouser-text">आपने अभी तक register नहीं किया है।<br>Register करें और course access पाएं!</div>
-        <button class="prof-reg-btn" onclick="closeProfileModal(); openRegModal();">🚀 Register Now — Free!</button>
-        <div style="margin-top:16px;font-size:12px;color:rgba(255,255,255,.5);font-family:'Poppins',sans-serif;">
-          Already registered? <span style="color:#ffd700;font-weight:700;cursor:pointer;text-decoration:underline;" onclick="showProfLogin()">Login here</span>
-        </div>
-      </div>
-
-      <!-- Login Form View -->
-      <div id="profLoginForm" style="display:none;text-align:left;">
-        <button class="prof-close" style="top:auto;bottom:-20px;right:-10px;position:absolute;width:32px;height:32px;" onclick="hideProfLogin()">🔙</button>
-        <div class="prof-name" style="margin-bottom:16px;text-align:center;">Welcome Back</div>
-        
-        <div class="reg-field">
-          <div class="reg-label">📱 MOBILE NUMBER</div>
-          <input class="reg-input" id="loginMobile" type="tel" maxlength="10" placeholder="10-digit mobile number" inputmode="numeric" />
-        </div>
-
-        <div class="reg-field">
-          <div class="reg-label">🔒 PASSWORD</div>
-          <input class="reg-input" id="loginPass" type="password" placeholder="Enter your password" />
-        </div>
-        
-        <div class="reg-err" id="loginErr" style="margin-bottom:12px;text-align:center;">⚠️ Invalid mobile number or password</div>
-
-        <button class="prof-reg-btn" onclick="submitProfLogin()">🔓 Login to Profile</button>
-      </div>
-    </div>
-
+    <button class="modal-close" onclick="closeModal()">✅ ठीक है, शुक्रिया!</button>
   </div>
 </div>
 
 <script>
-  /* ── PROFILE MODAL ── */
-  window.openProfileModal = function() {
-    if(window.hideProfLogin) window.hideProfLogin();
-    var mobile = '';
-    try { mobile = localStorage.getItem('mr_user_mobile') || ''; } catch(e) {}
-    var joinDate = '';
-    try { joinDate = localStorage.getItem('mr_user_joined') || ''; } catch(e) {}
+  // ==============================
+  // STATE
+  // ==============================
+  let currentYear, currentMonth, selectedDate = null, selectedSlot = null;
 
-    if (mobile) {
-      document.getElementById('profLoggedIn').style.display = 'block';
-      document.getElementById('profNoUser').style.display = 'none';
-      // Mask middle digits: 98XXXXXX10
-      var masked = mobile.substring(0,2) + 'XXXXXX' + mobile.substring(8);
-      document.getElementById('profMobileDisplay').textContent = '+91 ' + masked;
-      document.getElementById('profJoinDisplay').textContent = joinDate || new Date().toLocaleDateString('en-IN', {day:'numeric',month:'long',year:'numeric'});
-    } else {
-      document.getElementById('profLoggedIn').style.display = 'none';
-      document.getElementById('profNoUser').style.display = 'block';
-    }
+  const today = new Date();
+  currentYear  = today.getFullYear();
+  currentMonth = today.getMonth();
 
-    document.getElementById('profileOverlay').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  };
-
-  window.closeProfileModal = function() {
-    document.getElementById('profileOverlay').classList.remove('open');
-    document.body.style.overflow = '';
-  };
-
-  window.profLogout = function() {
+  // Fully booked dates (day numbers for current month; can be adjusted)
+  // Sunday = 0 (off days — no training on Sundays)
+  window.getBookedDates = function() {
     try {
-      localStorage.removeItem('mr_user_mobile');
-      localStorage.removeItem('mr_user_joined');
-    } catch(e) {}
-    closeProfileModal();
+      let saved = localStorage.getItem('mr_booked_dates');
+      let parsed = saved ? JSON.parse(saved) : null;
+      return Array.isArray(parsed) ? parsed : [17, 22, 28]; // Default dates
+    } catch(e) { return [17, 22, 28]; }
   };
 
-  /* ----- PROFILE LOGIN ----- */
-  window.showProfLogin = function() {
-    document.getElementById('profNoUserMain').style.display = 'none';
-    document.getElementById('profLoginForm').style.display = 'block';
-    document.getElementById('loginMobile').value = '';
-    document.getElementById('loginPass').value = '';
-    document.getElementById('loginErr').classList.remove('show');
-  };
+  const MONTHS = [
+    'January','February','March','April','May','June',
+    'July','August','September','October','November','December'
+  ];
 
-  window.hideProfLogin = function() {
-    var lForm = document.getElementById('profLoginForm');
-    var lMain = document.getElementById('profNoUserMain');
-    if(lForm) lForm.style.display = 'none';
-    if(lMain) lMain.style.display = 'block';
-  };
+  // Time slots with default availability
+  const ALL_SLOTS = [
+    { time: '9:00 AM',  period: 'Morning',   status: 'full'    },
+    { time: '11:00 AM', period: 'Morning',   status: 'limited' },
+    { time: '2:00 PM',  period: 'Afternoon', status: 'open'    },
+    { time: '4:00 PM',  period: 'Afternoon', status: 'limited' },
+    { time: '6:00 PM',  period: 'Evening',   status: 'open'    },
+    { time: '8:00 PM',  period: 'Evening',   status: 'open'    },
+  ];
 
-  window.submitProfLogin = function() {
-    var mob = document.getElementById('loginMobile').value.trim();
-    var pass = document.getElementById('loginPass').value;
-    var errEl = document.getElementById('loginErr');
-    
-    var regs = [];
-    try { regs = JSON.parse(localStorage.getItem('mr_registrations') || '[]'); } catch(e){}
-    
-    var found = regs.find(function(r) { return r.mobile === mob && r.pass === pass; });
-    
-    if (found) {
-      errEl.classList.remove('show');
-      localStorage.setItem('mr_user_mobile', found.mobile);
-      if(found.date) localStorage.setItem('mr_user_joined', found.date);
-      // Re-open profile to refresh view
-      hideProfLogin();
-      closeProfileModal();
-      openProfileModal();
-    } else {
-      errEl.classList.add('show');
-    }
-  };
-
-  // Save join date when user registers
-  var _origSubmitReg = window.submitReg;
-  window.submitReg = function() {
-    _origSubmitReg && _origSubmitReg();
+  window.getSlotConfig = function() {
     try {
-      var d = new Date();
-      var dateStr = d.toLocaleDateString('en-IN', {day:'numeric',month:'long',year:'numeric'});
-      if (localStorage.getItem('mr_user_mobile'))
-        localStorage.setItem('mr_user_joined', dateStr);
-    } catch(e) {}
+      let saved = localStorage.getItem('mr_slot_times');
+      let parsed = saved ? JSON.parse(saved) : null;
+      return Array.isArray(parsed) ? parsed : JSON.parse(JSON.stringify(ALL_SLOTS));
+    } catch(e) { return JSON.parse(JSON.stringify(ALL_SLOTS)); }
   };
 
-  // Close profile on overlay click
-  document.getElementById('profileOverlay').addEventListener('click', function(e) {
-    if (e.target === this) closeProfileModal();
-  });
-</script>
-
-<!-- ============================
-     REGISTRATION MODAL
-============================= -->
-<div id="regOverlay">
-  <div id="regBox">
-    <button class="reg-close" onclick="closeRegModal()">✕</button>
-
-    <!-- Form View -->
-    <div id="regForm">
-      <div class="reg-title">🧠 Register Now</div>
-      <div class="reg-subtitle">Quick signup & access your profile!</div>
-
-      <div class="reg-field">
-        <div class="reg-label">📱 MOBILE NUMBER</div>
-        <input class="reg-input" id="regMobile" type="tel" maxlength="10" placeholder="10-digit mobile number" inputmode="numeric" />
-        <div class="reg-err" id="regMobileErr">⚠️ Please enter a valid 10-digit mobile number</div>
-      </div>
-
-      <div class="reg-field">
-        <div class="reg-label">🔒 PASSWORD</div>
-        <input class="reg-input" id="regPass" type="password" placeholder="Create a password (min 6 chars)" />
-        <div class="reg-err" id="regPassErr">⚠️ Password must be at least 6 characters</div>
-      </div>
-
-      <div class="reg-field">
-        <div class="reg-label">🔒 CONFIRM PASSWORD</div>
-        <input class="reg-input" id="regConfirm" type="password" placeholder="Re-enter your password" />
-        <div class="reg-err" id="regConfirmErr">⚠️ Passwords do not match</div>
-      </div>
-
-      <button class="reg-btn" onclick="submitReg()">
-        🚀 Confirm & Register Profile
-      </button>
-    </div>
-
-    <!-- Success View -->
-    <div id="regSuccess">
-      <div class="suc-icon">✅</div>
-      <div class="suc-title">Registration Successful!</div>
-      <div class="suc-sub">Opening your profile...</div>
-      <div class="suc-loader"></div>
-    </div>
-  </div>
-</div>
-
-<script>
-  /* ── REGISTRATION MODAL ── */
-  var PAYMENT_LINK = 'https://payments.cashfree.com/links?code=aa38jtfmlieg_AAAAAAASxZQ';
-
-  window.checkLoginAndProceed = function() {
-    var mobile = '';
-    try { mobile = localStorage.getItem('mr_user_mobile') || ''; } catch(e) {}
-    
-    if (mobile) {
-      // User is logged in — directly redirect to payment
-      window.open(PAYMENT_LINK, '_blank');
-    } else {
-      // Not logged in — show registration
-      openRegModal();
-    }
-  };
-
-  window.openRegModal = function() {
-    // Reset form
-    document.getElementById('regForm').style.display = 'block';
-    document.getElementById('regSuccess').style.display = 'none';
-    ['regMobile','regPass','regConfirm'].forEach(function(id) {
-      var el = document.getElementById(id);
-      el.value = '';
-      el.classList.remove('error');
-    });
-    ['regMobileErr','regPassErr','regConfirmErr'].forEach(function(id) {
-      document.getElementById(id).classList.remove('show');
-    });
-    document.getElementById('regOverlay').classList.add('open');
-    document.body.style.overflow = 'hidden';
-    setTimeout(function(){ document.getElementById('regMobile').focus(); }, 300);
-  };
-
-  window.closeRegModal = function() {
-    document.getElementById('regOverlay').classList.remove('open');
-    document.body.style.overflow = '';
-  };
-
-  // Close on overlay background click
-  document.getElementById('regOverlay').addEventListener('click', function(e) {
-    if (e.target === this) closeRegModal();
-  });
-
-  window.submitReg = function() {
-    var mobile  = document.getElementById('regMobile').value.trim();
-    var pass    = document.getElementById('regPass').value;
-    var confirm = document.getElementById('regConfirm').value;
-    var valid   = true;
-
-    // Validate mobile
-    var mobEl   = document.getElementById('regMobile');
-    var mobErr  = document.getElementById('regMobileErr');
-    if (!/^[0-9]{10}$/.test(mobile)) {
-      mobEl.classList.add('error');
-      mobErr.classList.add('show');
-      valid = false;
-    } else {
-      mobEl.classList.remove('error');
-      mobErr.classList.remove('show');
-    }
-
-    // Validate password
-    var passEl  = document.getElementById('regPass');
-    var passErr = document.getElementById('regPassErr');
-    if (pass.length < 6) {
-      passEl.classList.add('error');
-      passErr.classList.add('show');
-      valid = false;
-    } else {
-      passEl.classList.remove('error');
-      passErr.classList.remove('show');
-    }
-
-    // Validate confirm password
-    var confEl  = document.getElementById('regConfirm');
-    var confErr = document.getElementById('regConfirmErr');
-    if (confirm !== pass || confirm.length === 0) {
-      confEl.classList.add('error');
-      confErr.classList.add('show');
-      valid = false;
-    } else {
-      confEl.classList.remove('error');
-      confErr.classList.remove('show');
-    }
-
-    if (!valid) return;
-
-    // Save to localStorage — append to list
+  // ==============================
+  // RENDER CALENDAR
+  // ==============================
+  function renderCalendar() {
     try {
-      localStorage.setItem('mr_user_mobile', mobile);
-      // Save to registrations list
-      var regList = [];
-      try { regList = JSON.parse(localStorage.getItem('mr_registrations') || '[]'); } catch(e2) { regList = []; }
-      if (!Array.isArray(regList)) regList = [];
-      // Avoid duplicate mobile
-      regList = regList.filter(function(r){ return r.mobile !== mobile; });
-      var now = new Date();
-      regList.unshift({
-        mobile: mobile,
-        pass: pass,
-        date: now.toLocaleDateString('en-IN', {day:'2-digit', month:'short', year:'numeric'}),
-        time: now.toLocaleTimeString('en-IN', {hour:'2-digit', minute:'2-digit', hour12:true})
-      });
-      localStorage.setItem('mr_registrations', JSON.stringify(regList));
-    } catch(e) {}
+      const label = document.getElementById('calMonthLabel');
+      label.textContent = MONTHS[currentMonth] + ' ' + currentYear;
 
-    // Show success screen
-    document.getElementById('regForm').style.display = 'none';
-    document.getElementById('regSuccess').style.display = 'block';
+      const grid = document.getElementById('calGrid');
+      // Remove old day cells (keep 7 label cells)
+      while (grid.children.length > 7) grid.removeChild(grid.lastChild);
 
-    // Open profile after 1.8 seconds
-    setTimeout(function() {
-      closeRegModal();
-      if(window.openProfileModal) openProfileModal();
-    }, 1500);
-  };
+      const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+      const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
 
-  // Allow Enter key to submit
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' && document.getElementById('regOverlay').classList.contains('open')) {
-      var form = document.getElementById('regForm');
-      if (form.style.display !== 'none') submitReg();
-    }
-  });
-</script>
-
-<script>
-  /* ── STICKY BAR — syncs seat count from localStorage ── */
-  (function(){
-    var bar  = document.getElementById('stickyBar');
-    var s1   = document.getElementById('stickySeats');
-    var s2   = document.getElementById('stickySeats2');
-    var main = document.getElementById('seatCount');
-    var shown = false;
-
-    /* Load initial count from localStorage for sticky bar */
-    var STORAGE_KEY = 'mr_slots';
-    var initSlots = localStorage.getItem(STORAGE_KEY);
-    if(initSlots !== null && s1 && s2){
-      s1.textContent = initSlots;
-      s2.textContent = initSlots;
-    }
-
-    /* Show sticky bar after 200px scroll */
-    window.addEventListener('scroll', function(){
-      if(window.scrollY > 200 && !shown){
-        bar.style.transform = 'translateY(0)';
-        shown = true;
+      // Blank cells
+      for (let i = 0; i < firstDay; i++) {
+        const blank = document.createElement('div');
+        blank.className = 'cal-day blank';
+        grid.appendChild(blank);
       }
-    }, {passive:true});
 
-    /* Sync sticky seats with main counter every 3 seconds */
-    setInterval(function(){
-      if(main && s1 && s2){
-        s1.textContent = main.textContent;
-        s2.textContent = main.textContent;
-      }
-    }, 3000);
-  })();
-</script>
+      // Day cells
+      const bookedDates = typeof window.getBookedDates === 'function' ? window.getBookedDates() : [17,22,28];
+      for (let d = 1; d <= daysInMonth; d++) {
+        const cell = document.createElement('div');
+        const cellDate = new Date(currentYear, currentMonth, d);
+        const isToday  = (d === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear());
+        const isPast   = cellDate < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        const isSunday = cellDate.getDay() === 0;
+        const isBooked = Array.isArray(bookedDates) ? bookedDates.includes(d) : false;
+        const isSelected = selectedDate &&
+          selectedDate.d === d &&
+          selectedDate.m === currentMonth &&
+          selectedDate.y === currentYear;
 
+        cell.textContent = d;
+        cell.className = 'cal-day';
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/91XXXXXXXXXX" class="wa-float" target="_blank">
-  💬 Chat on WhatsApp
-</a>
-
-<script>
-  // Language buttons
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', function(){
-      document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
-      this.classList.add('active');
-    });
-  });
-
-  // Countdown – 23:59 from load
-  let total = 23*60+59;
-  function tick(){
-    const h=Math.floor(total/3600), m=Math.floor((total%3600)/60), s=total%60;
-    document.getElementById('hrs').textContent=String(h).padStart(2,'0');
-    document.getElementById('min').textContent=String(m).padStart(2,'0');
-    document.getElementById('sec').textContent=String(s).padStart(2,'0');
-    if(total>0) total--;
-  }
-  tick(); setInterval(tick,1000);
-
-  // CTA click — Cashfree payment redirect
-  document.querySelectorAll('.cta-btn').forEach(btn=>{
-    btn.addEventListener('click',function(e){
-      this.style.transform='scale(0.96)';
-      setTimeout(()=>this.style.transform='',200);
-    });
-  });
-
-  // ============================================================
-          stSpan.textContent = '❌ Full';
-          slotEl.style.opacity = '0.5';
-          slotEl.style.cursor = 'default';
-        } else if (s.status === 'limited') {
-          stSpan.className = 'm-slot-avail m-avail-limited';
-          stSpan.textContent = '⚡ Limited';
+        if (isPast || isSunday) {
+          cell.classList.add('past', 'disabled');
+        } else if (isBooked) {
+          cell.classList.add('booked');
+          cell.title = 'यह दिन भरा हुआ है';
         } else {
-          stSpan.className = 'm-slot-avail m-avail-open';
-          stSpan.textContent = '✅ Available';
+          cell.classList.add('available');
+          cell.addEventListener('click', () => selectDate(d, currentMonth, currentYear, cell));
         }
-        slotEl.appendChild(stSpan);
-        grid.appendChild(slotEl);
-      });
+
+        if (isToday) cell.classList.add('today');
+        if (isSelected) cell.classList.add('selected');
+        grid.appendChild(cell);
+      }
     } catch(e) {
-      const grid = document.getElementById('mSlotsGrid');
-      if(grid) grid.innerHTML = '<div style="color:red;font-size:10px;">Error slots: ' + e.message + '</div>';
+      document.getElementById('calGrid').innerHTML += '<div style="color:red;font-size:10px;grid-column:1/-1;">Error cal: ' + e.message + '</div>';
     }
-  };
+  }
 
-  // Close modal on overlay click
-  document.getElementById('slotModal').addEventListener('click', function(e) {
-    if (e.target === this) closeSlotModal();
-  });
+  function changeMonth(dir) {
+    currentMonth += dir;
+    if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+    if (currentMonth < 0)  { currentMonth = 11; currentYear--; }
 
-  // ============================================================
-  // WARNING POPUP
-  // ============================================================
-  function showWarnPopup() {
-    document.getElementById('warnPopup').classList.add('open');
+    // Don't go before current month
+    if (currentYear < today.getFullYear() ||
+       (currentYear === today.getFullYear() && currentMonth < today.getMonth())) {
+      currentMonth = today.getMonth();
+      currentYear  = today.getFullYear();
+    }
+    renderCalendar();
   }
-  function closeWarnPopup() {
-    document.getElementById('warnPopup').classList.remove('open');
+
+  // ==============================
+  // SELECT DATE
+  // ==============================
+  function selectDate(d, m, y, cell) {
+    selectedDate = { d, m, y };
+    selectedSlot = null;
+
+    // Update calendar UI
+    document.querySelectorAll('.cal-day.selected').forEach(el => el.classList.remove('selected'));
+    cell.classList.add('selected');
+
+    // Update summary
+    const dateStr = d + ' ' + MONTHS[m] + ' ' + y;
+    document.getElementById('sumDate').textContent = dateStr;
+    document.getElementById('sumTime').textContent = '— चुनें';
+
+    // Enable time section
+    const timeSection = document.getElementById('timeSection');
+    timeSection.style.opacity = '1';
+    timeSection.style.pointerEvents = 'auto';
+    timeSection.style.filter = 'none';
+
+    // Render time slots
+    renderSlots(d);
+
+    // Smooth scroll to slots
+    setTimeout(() => timeSection.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+
+    checkFormReady();
   }
-  function goToPayment() {
-    closeWarnPopup();
-    closeSlotModal();
-    window.open(PAYMENT_URL, '_blank');
+
+  // ==============================
+  // RENDER TIME SLOTS
+  // ==============================
+  function renderSlots(dayNum) {
+    try {
+      const grid = document.getElementById('slotsGrid');
+      grid.innerHTML = '';
+
+      // Vary slots based on day so it feels dynamic (ONLY DO THIS if admin hasn't intervened heavily, else use admin)
+      // Here we respect exactly what Admin set
+      const slotData = typeof window.getSlotConfig === 'function' ? window.getSlotConfig() : [];
+      if(!Array.isArray(slotData)) return;
+
+      slotData.forEach((slot, idx) => {
+        // If admin has set a hidden status, don't show the card at all.
+        if (slot.status === 'hidden') return;
+
+        let avail = slot.status;
+        // Provide a slight dynamic variation automatically *only* if slot is open, to increase realism, unless admin forced it
+        const bookedDates = typeof window.getBookedDates === 'function' ? window.getBookedDates() : [17,22,28];
+        const isBkd = Array.isArray(bookedDates) ? bookedDates.includes(dayNum - 1) : false;
+        if (avail === 'open' && isBkd && idx < 2) {
+           avail = 'full';
+        }
+
+        const el = document.createElement('div');
+        el.className = 'slot';
+
+        const availLabel = avail === 'full'
+          ? '<span class="slot-avail slot-full-text">❌ Full</span>'
+          : avail === 'limited'
+          ? '<span class="slot-avail slot-limited">⚡ Limited Seats</span>'
+          : '<span class="slot-avail slot-available">✅ Available</span>';
+
+        // Re-map back period if missing
+        const periodMap = ['Morning','Morning','Afternoon','Afternoon','Evening','Evening'];
+
+        el.innerHTML = `
+          <span class="slot-check">✅</span>
+          <span class="slot-time">${slot.time}</span>
+          <span class="slot-period">${slot.period || periodMap[idx]}</span>
+          ${availLabel}
+        `;
+
+        if (avail === 'full') {
+          el.classList.add('slot-full');
+        } else {
+          el.addEventListener('click', () => selectSlot(idx, {time: slot.time, period: (slot.period || periodMap[idx])}, el));
+        }
+    });
+    } catch(e) {
+      document.getElementById('slotsGrid').innerHTML = '<div style="color:red;font-size:10px;">Error slots: ' + e.message + '</div>';
+    }
   }
+
+  // ==============================
+  // SELECT TIME SLOT
+  // ==============================
+  function selectSlot(idx, slotDataObj, cell) {
+    selectedSlot = { idx, ...slotDataObj };
+    document.querySelectorAll('.slot').forEach(s => s.classList.remove('slot-selected'));
+    cell.classList.add('slot-selected');
+
+    document.getElementById('sumTime').textContent = slotDataObj.time + ' (' + slotDataObj.period + ')';
+
+    // Enable form
+    const formSection = document.getElementById('formSection');
+    formSection.style.opacity = '1';
+    formSection.style.pointerEvents = 'auto';
+    formSection.style.filter = 'none';
+
+    setTimeout(() => formSection.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    checkFormReady();
+  }
+
+  // ==============================
+  // FORM VALIDATION → ENABLE BTN
+  // ==============================
+  function checkFormReady() {
+    const name  = document.getElementById('uName').value.trim();
+    const phone = document.getElementById('uPhone').value.trim();
+    const btn   = document.getElementById('confirmBtn');
+    
+    // Check if valid mobile (10 digits)
+    const phoneRegex = /^[0-9]{10}$/;
+    
+    if (selectedDate && selectedSlot && name.length >= 3 && phoneRegex.test(phone)) {
+      btn.removeAttribute('disabled');
+      btn.classList.add('ready');
+    } else {
+      btn.setAttribute('disabled', 'true');
+      btn.classList.remove('ready');
+    }
+  }
+
+  document.getElementById('uName').addEventListener('input', checkFormReady);
+  document.getElementById('uPhone').addEventListener('input', checkFormReady);
+
+  // ==============================
+  // CONFIRM BOOKING
+  // ==============================
+  function confirmBooking() {
+    const name  = document.getElementById('uName').value.trim();
+    const phone = document.getElementById('uPhone').value.trim();
+
+    if (!selectedDate || !selectedSlot || name.length < 2 || phone.length !== 10) return;
+
+    const dateStr = selectedDate.d + ' ' + MONTHS[selectedDate.m] + ' ' + selectedDate.y;
+
+    document.getElementById('modalName').textContent = name;
+    document.getElementById('modalDate').textContent = dateStr;
+    document.getElementById('modalTime').textContent = selectedSlot.time + ' (' + selectedSlot.period + ')';
+
+    // Update step indicator
+    document.querySelectorAll('.step')[2].classList.add('active');
+
+    // Show modal
+    document.getElementById('successModal').classList.add('show');
+  }
+
+  function closeModal() {
+    document.getElementById('successModal').classList.remove('show');
+  }
+
+  // ==============================
+  // INIT
+  // ==============================
+  renderCalendar();
 </script>
 
 <!-- ========================================
      SECRET ADMIN PANEL (hidden inside page)
-     Trigger: Click brain-tag 5x quickly
+     Trigger: Click "Mind Reading Secret" text in Summary Box 5x quickly
 ========================================= -->
 <div id="adminOverlay" style="
   display:none;position:fixed;inset:0;z-index:99999;
@@ -1846,10 +974,10 @@
       <div style="text-align:center;font-size:36px;margin-bottom:6px;">🔐</div>
       <div style="text-align:center;font-size:18px;font-weight:900;
         background:linear-gradient(90deg,#ffd700,#ff4dac);
-        -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+        background-clip:text;-webkit-text-fill-color:transparent;
         margin-bottom:4px;">Admin Login</div>
       <div style="text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-bottom:24px;">
-        Mind Reading Course Control
+        Slot Booking Control
       </div>
       <div style="margin-bottom:13px;">
         <div style="font-size:10px;font-weight:700;color:rgba(255,215,0,.7);
@@ -1880,7 +1008,7 @@
   </div>
 
   <!-- DASHBOARD -->
-  <div id="adDash" style="display:none;padding:20px 14px 60px;">
+  <div id="adDash" style="display:none;padding:20px 14px 60px; max-width: 430px; margin: 0 auto;">
 
     <div style="
       display:flex;align-items:center;justify-content:space-between;
@@ -1891,11 +1019,11 @@
       <div>
         <div style="font-size:15px;font-weight:900;
           background:linear-gradient(90deg,#ffd700,#ff4dac);
-          -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">
+          background-clip:text;-webkit-text-fill-color:transparent;">
           🧠 Admin Panel
         </div>
         <div style="font-size:10px;color:rgba(255,255,255,.35);margin-top:2px;">
-          Mind Reading Course
+          Slot Booking Control
         </div>
       </div>
       <button onclick="adLogout()" style="
@@ -1906,159 +1034,68 @@
       ">⬅ Logout</button>
     </div>
 
-    <!-- SLOT CONTROL -->
+    <!-- SLOT BOOKING CONTROL SECTION -->
     <div style="
-      background:linear-gradient(160deg,rgba(60,0,120,.3),rgba(30,0,60,.4));
-      border:1.5px solid rgba(255,215,0,.18);border-radius:16px;
-      padding:20px;margin-bottom:14px;
-    ">
-      <div style="font-size:12px;font-weight:800;color:rgba(255,215,0,.85);
-        letter-spacing:.5px;margin-bottom:16px;">🎯 SLOT COUNT CONTROL</div>
-
-      <div id="adBigNum" style="
-        text-align:center;font-size:60px;font-weight:900;color:#ff4444;
-        line-height:1;text-shadow:0 0 30px rgba(255,50,50,.5);margin-bottom:4px;
-      ">29</div>
-      <div style="text-align:center;font-size:11px;color:rgba(255,255,255,.4);margin-bottom:16px;">
-        Slots Remaining on Live Page
-      </div>
-
-      <!-- Buttons -->
-      <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px;">
-        <button onclick="adChange(-10)" style="width:42px;height:42px;border-radius:50%;border:none;
-          background:linear-gradient(135deg,#cc0000,#ff3300);color:#fff;font-size:14px;
-          font-weight:900;cursor:pointer;">−10</button>
-        <button onclick="adChange(-1)" style="width:42px;height:42px;border-radius:50%;border:none;
-          background:linear-gradient(135deg,#ff2200,#ff6600);color:#fff;font-size:20px;
-          font-weight:900;cursor:pointer;">−</button>
-        <input id="adInput" type="number" value="29" min="0" max="999"
-          onchange="adSyncInput()"
-          style="width:72px;text-align:center;padding:8px;border-radius:10px;
-          background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.2);
-          color:#fff;font-size:20px;font-weight:900;font-family:'Poppins',sans-serif;outline:none;"/>
-        <button onclick="adChange(1)" style="width:42px;height:42px;border-radius:50%;border:none;
-          background:linear-gradient(135deg,#007700,#00c853);color:#fff;font-size:20px;
-          font-weight:900;cursor:pointer;">+</button>
-        <button onclick="adChange(10)" style="width:42px;height:42px;border-radius:50%;border:none;
-          background:linear-gradient(135deg,#005500,#00a040);color:#fff;font-size:14px;
-          font-weight:900;cursor:pointer;">+10</button>
-      </div>
-
-      <!-- Progress bar -->
-      <div style="margin-bottom:16px;">
-        <div style="display:flex;justify-content:space-between;font-size:10px;
-          color:rgba(255,255,255,.45);margin-bottom:5px;">
-          <span id="adBooked">71 booked</span>
-          <span id="adRemain" style="color:#ff4444;">29 left / 100 total</span>
-        </div>
-        <div style="height:10px;background:rgba(255,255,255,.1);border-radius:10px;overflow:hidden;">
-          <div id="adBar" style="height:100%;width:71%;border-radius:10px;
-            background:linear-gradient(90deg,#ff2200,#ff6600,#ffcc00);
-            transition:width .4s ease;"></div>
-        </div>
-      </div>
-
-      <!-- Save -->
-      <button onclick="adSave()" style="
-        width:100%;padding:13px;border-radius:12px;border:none;cursor:pointer;
-        background:linear-gradient(135deg,#ffd700,#ff8c00);
-        color:#1a0035;font-size:15px;font-weight:900;font-family:'Poppins',sans-serif;
-      ">💾 Save & Update Page Now</button>
-      <div id="adSaveMsg" style="
-        text-align:center;font-size:12px;font-weight:700;color:#00e676;
-        margin-top:10px;display:none;
-      ">✅ Updated! Page now shows new count.</div>
-    </div>
-
-    <!-- QUICK PRESETS -->
-    <div style="
-      background:linear-gradient(160deg,rgba(60,0,120,.3),rgba(30,0,60,.4));
-      border:1.5px solid rgba(255,215,0,.18);border-radius:16px;
-      padding:18px;margin-bottom:14px;
-    ">
-      <div style="font-size:12px;font-weight:800;color:rgba(255,215,0,.85);
-        letter-spacing:.5px;margin-bottom:12px;">⚡ QUICK PRESETS</div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;">
-        <button onclick="adSet(50)" style="padding:8px 14px;border-radius:30px;border:none;
-          background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
-          color:#fff;font-size:12px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;">
-          50 Slots
-        </button>
-        <button onclick="adSet(29)" style="padding:8px 14px;border-radius:30px;border:none;
-          background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
-          color:#fff;font-size:12px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;">
-          29 Slots
-        </button>
-        <button onclick="adSet(15)" style="padding:8px 14px;border-radius:30px;border:none;
-          background:rgba(255,150,0,.2);border:1px solid rgba(255,150,0,.4);
-          color:#ffaa44;font-size:12px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;">
-          🔥 15 Slots
-        </button>
-        <button onclick="adSet(5)" style="padding:8px 14px;border-radius:30px;border:none;
-          background:rgba(255,50,0,.2);border:1px solid rgba(255,80,0,.4);
-          color:#ff7744;font-size:12px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;">
-          ⚠️ 5 Slots
-        </button>
-        <button onclick="adSet(1)" style="padding:8px 14px;border-radius:30px;border:none;
-          background:rgba(255,0,0,.2);border:1px solid rgba(255,0,0,.4);
-          color:#ff5555;font-size:12px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;">
-          🚨 Last 1!
-        </button>
-      </div>
-    </div>
-
-    <!-- INFO -->
-    <div style="
-      background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
-      border-radius:12px;padding:14px;font-size:11px;
-      color:rgba(255,255,255,.4);line-height:1.7;
-    ">
-      ℹ️ Secret trigger: Click the <strong style="color:rgba(255,215,0,.7);">🧠 brain tag</strong> 5 times fast.<br/>
-      Changes apply instantly on this page. On other devices, hardcode the value directly in HTML.
-    </div>
-
-    <!-- REGISTERED USERS SECTION -->
-    <div style="
-      background:linear-gradient(160deg,rgba(0,60,40,.4),rgba(0,30,20,.5));
-      border:1.5px solid rgba(0,200,100,.25);border-radius:16px;
+      background:linear-gradient(160deg,rgba(0,60,120,.35),rgba(0,30,60,.45));
+      border:1.5px solid rgba(100,180,255,.25);border-radius:16px;
       padding:20px;margin-top:14px;
     ">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;">
-        <div style="font-size:12px;font-weight:800;color:rgba(0,220,110,.9);letter-spacing:.5px;">👥 REGISTERED USERS</div>
-        <div id="adRegCount" style="font-size:11px;font-weight:700;color:rgba(255,215,0,.8);">0 users</div>
+      <div style="font-size:12px;font-weight:800;color:rgba(100,200,255,.9);
+        letter-spacing:.5px;margin-bottom:6px;">📅 SLOT BOOKING CONTROL</div>
+      <div style="font-size:10px;color:rgba(255,255,255,.4);margin-bottom:16px;">
+        Set each time slot status — Date chunne ke baad ye slots dikhenge
       </div>
-      <div style="font-size:10px;color:rgba(255,255,255,.35);margin-bottom:14px;">Page pe register kiye sabhi users ki list</div>
 
-      <div id="adRegList" style="display:flex;flex-direction:column;gap:8px;max-height:320px;overflow-y:auto;"></div>
+      <!-- Status legend -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;">
+        <span style="font-size:10px;font-weight:700;color:#00e676;">✅ Available</span>
+        <span style="font-size:10px;font-weight:700;color:#ffaa00;">⚡ Limited</span>
+        <span style="font-size:10px;font-weight:700;color:#ff4444;">❌ Full</span>
+        <span style="font-size:10px;font-weight:700;color:rgba(255,255,255,.3);">🚫 Hidden</span>
+      </div>
 
-      <button onclick="adDeleteAllReg()" style="
-        width:100%;padding:10px;border-radius:10px;border:none;cursor:pointer;margin-top:12px;
-        background:rgba(255,50,50,.15);border:1.5px solid rgba(255,80,80,.3);
-        color:#ff8888;font-size:12px;font-weight:700;font-family:'Poppins',sans-serif;
-      ">🗑️ Delete All Registrations</button>
+      <!-- Slot rows — generated by JS -->
+      <div id="adSlotRows" style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;"></div>
+
+      <div style="font-size:12px;font-weight:800;color:rgba(100,200,255,.9);
+        letter-spacing:.5px;margin-bottom:6px;margin-top:20px;">🗓️ CALENDAR DATES CONTROL</div>
+      <div style="font-size:10px;color:rgba(255,255,255,.4);margin-bottom:12px;">
+        Type the dates (1 to 31) that are FULL (Red), separated by commas. Other days remain Green.
+      </div>
+      <input id="adBookedDatesInput" type="text" placeholder="e.g. 17, 22, 28" 
+        style="width:100%;padding:10px;border-radius:10px;margin-bottom:16px;
+        background:rgba(0,0,0,.5);border:1px solid rgba(255,215,0,.3);
+        color:#fff;font-size:13px;font-family:'Poppins',sans-serif;outline:none;" />
+
+      <button onclick="adSaveSlots()" style="
+        width:100%;padding:12px;border-radius:12px;border:none;cursor:pointer;
+        background:linear-gradient(135deg,#0077cc,#00aaff);
+        color:#fff;font-size:14px;font-weight:900;font-family:'Poppins',sans-serif;
+      ">💾 Save Slot Settings &amp; Update Live</button>
+      <div id="adSlotMsg" style="
+        text-align:center;font-size:12px;font-weight:700;color:#00e676;
+        margin-top:10px;display:none;
+      ">✅ Slot settings saved! View updated.</div>
     </div>
-
   </div><!-- /adDash -->
-
 </div><!-- /adminOverlay -->
 
 <script>
 /* ═══════════════════════════════════════
    SECRET ADMIN — embedded in main page
-   Trigger: click brain-tag 5× in 3 sec
+   Trigger: click "Course" detail text 5× in 3 sec
 ═══════════════════════════════════════ */
 (function(){
   var AD_USER = 'admin';
   var AD_PASS = 'mindreading@123';
-  var SKEY   = 'mr_slots';
   var clicks = 0, timer = null;
 
-  /* Attach secret trigger to brain-tag */
+  /* Attach secret trigger to summary box (Mind Reading Secret text) */
   function attachTrigger(){
-    var tag = document.querySelector('.brain-tag');
-    if(!tag) return;
-    tag.style.cursor = 'pointer';
-    tag.addEventListener('click', function(){
+    var summaryEl = document.querySelector('.summary-row:first-child .summary-val');
+    if(!summaryEl) return;
+    summaryEl.style.cursor = 'pointer';
+    summaryEl.addEventListener('click', function(){
       clicks++;
       clearTimeout(timer);
       if(clicks >= 5){
@@ -2073,12 +1110,7 @@
   function openAdmin(){
     var overlay = document.getElementById('adminOverlay');
     overlay.style.display = 'block';
-    /* Load current slot value into input */
-    var cur = localStorage.getItem(SKEY);
-    var val = cur !== null ? parseInt(cur) : parseInt(document.getElementById('seatCount')?.textContent || 29);
-    document.getElementById('adInput').value  = val;
-    document.getElementById('adBigNum').textContent = val;
-    adRefresh();
+    if(typeof window.adRenderSlotRows === 'function') window.adRenderSlotRows();
   }
 
   window.adminClose = function(){
@@ -2096,10 +1128,6 @@
     if(u === AD_USER && p === AD_PASS){
       document.getElementById('adLoginWrap').style.display = 'none';
       document.getElementById('adDash').style.display = 'block';
-      var cur = localStorage.getItem(SKEY);
-      var val = cur !== null ? parseInt(cur) : 29;
-      adSet(val);
-      adRenderRegistrations();
     } else {
       document.getElementById('adErr').style.display = 'block';
     }
@@ -2120,111 +1148,72 @@
     document.getElementById('adPass').value = '';
   };
 
-  /* ── Slot helpers ── */
-  function adGetVal(){ return parseInt(document.getElementById('adInput').value) || 0; }
+  /* ── Time Slot Editor helpers ── */
+  window.adRenderSlotRows = function() {
+    var cont = document.getElementById('adSlotRows');
+    if(!cont) return;
+    cont.innerHTML = '';
+    var slots = window.getSlotConfig ? getSlotConfig() : [];
+    slots.forEach(function(s, idx){
+      var div = document.createElement('div');
+      div.style.display = 'flex';
+      div.style.alignItems = 'center';
+      div.style.justifyContent = 'space-between';
+      div.style.padding = '8px 12px';
+      div.style.background = 'rgba(255,255,255,.05)';
+      div.style.borderRadius = '8px';
+      div.style.border = '1px solid rgba(255,255,255,.1)';
 
-  window.adSet = function(n){
-    n = Math.max(0, Math.min(n, 999));
-    document.getElementById('adInput').value        = n;
-    document.getElementById('adBigNum').textContent = n;
-    adRefresh();
+      div.innerHTML = `
+        <div style="font-size:13px;font-weight:700;width:70px;">${s.time}</div>
+        <select id="adSlotSel_${idx}" style="
+          padding:6px;border-radius:6px;background:rgba(0,0,0,.5);color:#fff;
+          border:1px solid rgba(255,215,0,.3);font-family:'Poppins',sans-serif;
+          font-size:12px;outline:none;cursor:pointer;
+        ">
+          <option value="open" ${s.status === 'open' ? 'selected' : ''}>✅ Available</option>
+          <option value="limited" ${s.status === 'limited' ? 'selected' : ''}>⚡ Limited</option>
+          <option value="full" ${s.status === 'full' ? 'selected' : ''}>❌ Full</option>
+          <option value="hidden" ${s.status === 'hidden' ? 'selected' : ''}>🚫 Hidden</option>
+        </select>
+      `;
+      cont.appendChild(div);
+    });
+
+    // Populate booked dates input
+    var bInput = document.getElementById('adBookedDatesInput');
+    if(bInput && window.getBookedDates) {
+      bInput.value = window.getBookedDates().join(', ');
+    }
   };
-  window.adChange    = function(d){ adSet(adGetVal() + d); };
-  window.adSyncInput = function(){ adSet(adGetVal()); };
 
-  function adRefresh(){
-    var n   = adGetVal();
-    var tot = 100;
-    var bk  = Math.max(0, tot - n);
-    var pct = Math.round(bk / tot * 100);
-    document.getElementById('adBar').style.width        = pct + '%';
-    document.getElementById('adBooked').textContent     = bk  + ' booked';
-    document.getElementById('adRemain').textContent     = n   + ' left / ' + tot + ' total';
-    document.getElementById('adBigNum').textContent     = n;
-  }
+  window.adSaveSlots = function() {
+    var slots = window.getSlotConfig ? getSlotConfig() : [];
+    slots.forEach(function(s, idx){
+      var sel = document.getElementById('adSlotSel_'+idx);
+      if(sel) s.status = sel.value;
+    });
+    localStorage.setItem('mr_slot_times', JSON.stringify(slots));
 
-  window.adSave = function(){
-    var n = adGetVal();
-    localStorage.setItem(SKEY, n);
+    // Save booked dates
+    var bInput = document.getElementById('adBookedDatesInput');
+    if(bInput) {
+      var arr = bInput.value.split(',').map(v => parseInt(v.trim())).filter(n => !isNaN(n));
+      localStorage.setItem('mr_booked_dates', JSON.stringify(arr));
+    }
+    
+    // Auto-update calendar globally
+    if(typeof window.renderCalendar === 'function') window.renderCalendar();
+    // Auto-update slots if day is selected
+    if(typeof window.renderSlots === 'function' && typeof selectedDate !== 'undefined' && selectedDate) {
+       window.renderSlots(selectedDate.d);
+    }
 
-    /* Update live page elements immediately */
-    var sc = document.getElementById('seatCount');
-    var s1 = document.getElementById('stickySeats');
-    var s2 = document.getElementById('stickySeats2');
-    if(sc) sc.textContent = n;
-    if(s1) s1.textContent = n;
-    if(s2) s2.textContent = n;
-
-    /* also update progress bar booked label on main page */
-    var bl = document.getElementById('bookedLabel');
-    var rl = document.getElementById('remainLabel');
-    if(bl) bl.textContent = (100 - n) + ' seats booked';
-    if(rl) rl.textContent = n + ' left / 100 total';
-    var pb = document.getElementById('pbFill');
-    if(pb) pb.style.width = Math.round((100-n)) + '%';
-
-    var msg = document.getElementById('adSaveMsg');
+    var msg = document.getElementById('adSlotMsg');
     msg.style.display = 'block';
     setTimeout(function(){ msg.style.display = 'none'; }, 3000);
   };
 
-  /* ----- REGISTRATIONS MANAGEMENT ----- */
-  window.adRenderRegistrations = function() {
-    var listEl = document.getElementById('adRegList');
-    var countEl = document.getElementById('adRegCount');
-    if(!listEl || !countEl) return;
-
-    var regs = [];
-    try { regs = JSON.parse(localStorage.getItem('mr_registrations') || '[]'); } catch(e){}
-    if (!Array.isArray(regs)) regs = [];
-
-    countEl.textContent = regs.length + " users";
-
-    if (regs.length === 0) {
-      listEl.innerHTML = '<div style="font-size:11px;color:rgba(255,255,255,.3);text-align:center;padding:20px;">No registrations yet.</div>';
-      return;
-    }
-
-    var html = '';
-    for(var i=0; i<regs.length; i++){
-      var r = regs[i];
-      html += '<div style="background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.05);padding:10px 12px;border-radius:10px;display:flex;align-items:center;justify-content:space-between;">' +
-                '<div>' +
-                  '<div style="font-size:12px;font-weight:700;color:#fff;font-family:\'Poppins\',sans-serif;margin-bottom:2px;">📱 '+ (r.mobile || 'Unknown') +'</div>' +
-                  '<div style="font-size:9px;color:rgba(255,255,255,.4);font-family:\'Poppins\',sans-serif;">📅 '+ (r.date||'') +' • '+ (r.time||'') +'</div>' +
-                '</div>' +
-                '<button onclick="adDeleteReg('+i+')" style="background:rgba(255,50,50,.15);border:1px solid rgba(255,50,50,.3);color:#ff6666;border-radius:6px;width:28px;height:28px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;">✕</button>' +
-              '</div>';
-    }
-    listEl.innerHTML = html;
-  };
-
-  window.adDeleteReg = function(index) {
-    if(!confirm("Are you sure you want to delete this registration?")) return;
-    try {
-      var regs = JSON.parse(localStorage.getItem('mr_registrations') || '[]');
-      if(Array.isArray(regs)){
-        regs.splice(index, 1);
-        localStorage.setItem('mr_registrations', JSON.stringify(regs));
-        adRenderRegistrations();
-      }
-    } catch(e){}
-  };
-
-  window.adDeleteAllReg = function() {
-    if(!confirm("WARNING: This will delete ALL registrations. Are you sure?")) return;
-    if(!confirm("Please confirm again. This action cannot be undone.")) return;
-    try {
-      localStorage.removeItem('mr_registrations');
-      // Also clear current local user if they happen to be registered on this browser
-      localStorage.removeItem('mr_user_mobile');
-      localStorage.removeItem('mr_user_joined');
-      adRenderRegistrations();
-      alert("All registrations have been deleted.");
-    } catch(e){}
-  };
-
-  /* Init */
   if(document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', attachTrigger);
   } else {
